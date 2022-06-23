@@ -1,0 +1,49 @@
+{
+    "name": "testdi-111",
+    "version": "1.0",
+    "description": "Right Click on highlighted text, to automatically search for answers from Quizlet.",
+    "icons": {
+        "16": "./images/icon16.png",
+        "32": "./images/icon32.png",
+        "48": "./images/icon48.png",
+        "128": "./images/icon128.png",
+        "256": "./images/icon256.png",
+        "512": "./images/icon512.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "notifications",
+        "activeTab",
+        "http://*/",
+        "https://*/",
+        "tabs",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_title": "Homework Helper",
+        "default_icon": "/images/icon32.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "main.js",
+        "toast.js",
+        "toast.css"
+    ]
+}
