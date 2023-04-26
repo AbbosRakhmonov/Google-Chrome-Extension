@@ -36,14 +36,15 @@
                 "<all_urls>"
             ],
             "js": [
-                "content.js"
+                "content.js",
+                "toastify.js"
             ],
             "run_at": "document_end"
         }
     ],
     "web_accessible_resources": [
         "main.js",
-        "toast.js",
+        "toastify.js",
         "toast.css"
     ]
 }

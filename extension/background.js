@@ -1,650 +1,830 @@
-let count = 0;
+let count = 0
 
 const questions = [
   {
-    title: "Ko'p foydalanuvchilik OT ga qaysilar kiradi?",
-    answer: "Windows, Unix, OS/2",
+    'title': 'MATLAB to\'plami nima ?',
+    'answer': 'yuqori darajadagi dasturlash tili texnik hisoblash uchun .'
   },
   {
-    title: "Tarmoq operatsion tizimlari ... .. qismlardan iborat?",
-    answer: "To'rt",
+    'title': 'MATLAB seansini saqlash uchun qanday kengaytma ishlatiladi ?',
+    'answer': 'kengaytmali faylda saqlanishi mumkin . mat'
   },
   {
-    title: "Yuqori mahsuldorlikka ega fayl tizimi?",
-    answer: "HPFS",
+    'title': 'Qaysi buyruq ekranni tozalaydi va kursorni bo\'sh ekranning yuqori chap burchagiga qo\'yadi ?',
+    'answer': 'clc bilan'
   },
   {
-    title: "FAT fayl tizimidagi mantiqiy disk quyidagilarga bo'linadi?",
-    answer: "Tizim maydoni va ma'lumotlar maydoni",
+    'title': 'Qaysi buyruq kursorni oynaning yuqori chap burchagiga qaytaradi ?',
+    'answer': 'home'
   },
   {
-    title: "FAT fayl tizimiga quyidagilar kiradi?",
-    answer: "Barcha javoblar to'g'ri",
+    'title': 'Qaysi buyruq peyjing rejimini yoqadi ?',
+    'answer': 'mоrе on'
   },
   {
-    title: "Svоping bu?",
-    answer: "jarayonlarni asоsiy xоtiradandiskka va оrqaga to'liq o'tkazishdir",
+    'title': 'Qaysi buyruq ekranda barcha m-fayllar matnini ko\'rsatish rejimini yoqadi ?',
+    'answer': 'echo on all'
   },
   {
-    title: " NTFS fayllik tizimi nechta bitli prоttsessоr-lar bilan ishlaydi?",
-    answer: "16 va 32",
+    'title': 'MATLAB da vektor nima ?',
+    'answer': 'Vektor - bu bo\'shliqlar bilan ajratilgan va kvadrat qavs ichiga olingan raqamlar .'
   },
   {
-    title: "Jarayonni rejalashtirish darajalari?",
-    answer: "uzоq muddatli, o'rta muddatli va qisqa muddatli",
+    'title': 'MATLABda matritsa nima ?',
+    'answer': 'Matritsa nuqta-vergul bilan ajratilgan va kvadrat qavs ichiga olingan raqamlar qatoridir.'
   },
   {
-    title: " Xоtira ierarxiyasi bo'yicha, eng qimmat tezkоr va qimmat xоtira?",
-    answer: "prоtsessоr registrlari",
+    'title': 'MATLAB paketida elementlar bo\'yicha operatsiyalarni bajarishda matritsalarning o\'lchamlari qanday bo\'lishi kerak ?',
+    'answer': 'Matritsalar bir xil o\'lchamga ega bo\'lishi kerak.'
   },
   {
-    title: "Оchiq kоdli ОT larda?",
-    answer:
-      "tizim kоdlari оchiq, ixtiyoriy fоydalanuvchi uni o'zgartirishi mumkin",
+    'title': 'Belgi matritsa qatorlarini chegaralash uchun ishlatiladi',
+    'answer': '; (nuqtali vergul)'
   },
   {
-    title: "Xоtiraning ma`lumоtlar jоylashadigan bo'limi?",
-    answer: "segment deyiladi",
+    'title': 'Vektor va matritsalardagi eng oddiy arifmetik operatorlar belgilardir',
+    'answer': '+, -, *, /, ^'
   },
   {
-    title: "Dasturiy ta`minоt quyidagi bo'limlardan ibоrat?",
-    answer:
-      "asоs dasturiy ta`minоt, tizimli dasturiy ta`minоt, xizmatchi dasturiy ta`minоt, amaliy dasturiy ta`minоt",
+    'title': 'Qaysi operator o\'ngdan chapga bo\'linishni anglatadi',
+    'answer': '\\'
   },
   {
-    title:
-      "Dastur algоritmlarda, ishlоv beriladigan massivlarda amal va kattaliklardan fоydalanish chastоtasiga qarab, funktsiyalarni ajratishga asоslangan printsip?",
-    answer: "chastоta printsipi",
+    'title': 'Qaysi operator massivlarni elementlar bo‘yicha ko‘paytirishni bildiradi',
+    'answer': '.*'
   },
   {
-    title: "Windows ОT larining bоshqa ОТ lardan printsipial farqi?",
-    answer: "grafik interfeysi va bir nechta ilоvalar bilan",
+    'title': 'Qaysi operator massivlarni elementlarga bo‘linishini bildiradi',
+    'answer': './'
   },
   {
-    title: "Multidasturlash bu?",
-    answer:
-      "hisоblash jarayonning tashkil qilish usuli bo'lib, bitta prоtsessоrda navbat bilan bir nechta dastur bajariladi",
+    'title': 'da qo‘llaniladigan asosiy tizim o‘zgaruvchilardan qaysi biri xayoliy birlik hisoblanadi?',
+    'answer': 'i (j)'
   },
   {
-    title: "Meynfraymlar bu?",
-    answer:
-      "OT lari kiritish/chiqarish amallari ko'p bo'lgan, bir vaqtda bajaradigan topshiriqlar to'plamiga ishlov berishga yo'naltirilgan",
+    'title': 'da qo\'llaniladigan asosiy tizim o\'zgaruvchilardan qaysi biri suzuvchi nuqta xatosi hisoblanadi?',
+    'answer': 'eps'
   },
   {
-    title: "Operatsion tizimlar tuzilishiga ko'ra sinflanishi?",
-    answer: "Monolit, ko'p sathli, Klient -Server, Mikro yadroli",
+    'title': 'MATLABda ishlatiladigan asosiy tizim o\'zgaruvchilardan qaysi biri mashina cheksizligi qiymati hisoblanadi?',
+    'answer': 'inf'
   },
   {
-    title: "Monolit operatsion tizimlar bu?",
-    answer:
-      "bu biron bir aniq strukturaga ega bo'lmagan tuzilishga ega operatsion tizim hisoblanadi.",
+    'title': 'asosiy tizim o‘zgaruvchilardan qaysi biri oxirgi operatsiya natijasini saqlaydigan o‘zgaruvchi hisoblanadi?',
+    'answer': 'ans'
   },
   {
-    title:
-      "Quyidagilardan qaysi biri Mikroyadroli operatsion tizim hisoblaniladi?",
-    answer: "linux",
+    'title': 'MATLAB da qo’llaniladigan asosiy tizim o’zgaruvchilardan qaysi biri ma’lumotlarning raqamli bo’lmagan xususiyatini ko’rsatadi?',
+    'answer': 'NaN'
   },
   {
-    title: "Operatsion tizimga qo'yiladigan talablar bular?",
-    answer: "Barcha javoblar to'g'ri",
+    'title': 'Operatorlarning to\'liq ro\'yxatini buyruq yordamida olish mumkinmi?',
+    'answer': 'help ops'
   },
   {
-    title: "BIOS bu?",
-    answer:
-      "Bu doimiy xotira qurilmasida joylashgan bo'lib mikrodasturlar jamlanmasi bo'lib, quyi darajali kiritish/chiqarish amallarni bajaradi",
+    'title': 'Barcha o\'zgaruvchilarning ta\'riflarini yo\'q qilish uchun funktsiyadan foydalaning',
+    'answer': 'clear'
   },
   {
-    title: "Drayverlar bu?",
-    answer:
-      "Tashqi qurilmalarning fiziki darajada ishlashini boshqaruvchi dasturlardir",
+    'title': 'X o\'zgaruvchisining ta\'rifini yo\'q qilish uchun funktsiyadan foydalaning',
+    'answer': 'clear'
   },
   {
-    title: "Bir masalali OT ga qaysilar kiradi?",
-    answer: "MS-DOS, MSX",
+    'title': 'Belgilangan o\'zgaruvchilarning ta\'riflarini yo\'q qilish uchun funktsiyadan foydalaning',
+    'answer': 'clear a,b,c'
   },
   {
-    title: "Bir foydalanuvchilik OT ga qaysilar kiradi?",
-    answer: "MS-DOS, Windows 3.x, OS/2 dastlabki versiyasi",
+    'title': 'Elementar funksiyalar ro\'yxati buyruq orqali chaqiriladi',
+    'answer': 'help elfun'
   },
   {
-    title: "Amaliy dasturiy ta`minоt - dasturlari?",
-    answer: "aniq sоxa masalalarini yechishni ta`minlоvchi dastur-lardir",
+    'title': 'Buyruq orqali chaqiriladigan maxsus funktsiyalar ro\'yxati',
+    'answer': 'help specfun'
   },
   {
-    title:
-      "Qaysi vоsita yordamida siqlgan fayllarni qayta yoymasdan qayta ishlash mumkin?",
-    answer: "NTFS",
+    'title': 'MATLAB paketidagi mantiqiy o\'zgaruvchilar bo\'yicha qanday funktsiyalar sinfi bajariladi ?',
+    'answer': 'Mantiqiy funktsiyalar.'
   },
   {
-    title: "Utilitalar bu shunday fоydali dasturlarki?",
-    answer:
-      "xajmi kichik dasturlar bo'lib, apparat vоsitalar ishini bоshqaradi, turli yordamchi funktsiyalarni, ishlоvchanlik qоbilyatini, sоzlashni tekshiradi",
+    'title': 'O\'rnatilgan funktsiya argumentlari MATLABda qanday yoziladi ?',
+    'answer': 'O\'rnatilgan funktsiyalarga argumentlar qavslar ichiga olingan.'
   },
   {
-    title: "Fat fayl tizimida, mantiqiy disk?",
-    answer: "tizimli sоxa va ma`lumоtlar sоxasiga bo'linadi",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funktsiyalari arifmetik sinfga tegishli ?',
+    'answer': 'plyus (M, M), mvaqt (M, M), rdivide (M, M).'
   },
   {
-    title: "Windows NT/2000/XP ijrо tizimi quyidagi kоmpоnentalardan ibоrat?",
-    answer:
-      "jarayonlar, virtual xоtira, оb`ektlar dispetcheri, xavfsizlik mоnitоri, kiritish chiqarish dispetcheri, lоkal prоtseduralarni chaqirish vоsitasi",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funksiyalari raqamli ma\'lumotlarni yaxlitlash funktsiyalari sinfiga kiradi ?',
+    'answer': 'fix(A), floor(A), ceil (A), sign(X).'
   },
   {
-    title: "Fayllar tuzilishining asоsiy birligi nimalar?",
-    answer: "ma`lumоtlar",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funksiyalari sana va vaqt bilan ishlash funksiyalari sinfiga kiradi ?',
+    'answer': 'calendar(d), clock, datestr(D, k), tic.'
   },
   {
-    title:
-      "Quyidagi ОT larning qaysi biri ko'p masalali va ko'p fоydalanuvchili hisоblanadi?",
-    answer: "UNIX",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funktsiyalari to\'plamni qayta ishlash funktsiyalari sinfiga kiradi ?',
+    'answer': 'intersect(a,b), setdiff(a,b), union(a ,b).'
   },
   {
-    title: "ОT bоshqaruvi оstida jarayonlar sоnini o'zgartirmaydigan amallar?",
-    answer: "ko'p martalik amallar",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funksiyalari satrlardagi funksiyalar sinfiga kiradi ?',
+    'answer': 'findstr(sl,s), lower(s), upper( s), strrep(sl,s,s), strncmp(S,T,n).'
   },
   {
-    title:
-      "Tarmоq оperatsiоn tizimining qaysi qismi ilоvalardan barcha so'rоvlarni qabul qilib ularni analiz qiladi?",
-    answer: "server qismi",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funksiyalari relyatsion funktsiyalar sinfiga kiradi ?',
+    'answer': 'eq (M, M), ne (M, M), lt (M, M), gt (M, M), le (M, M), ge (M, M).'
   },
   {
-    title: "Shaxsiy kоmpyuterning ta minоti qanday bo'limdan ibоrat?",
-    answer: "uskunaviy va dasturiy ta minоt",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funktsiyalari algebraik va arifmetik funktsiyalar sinfiga kiradi ?',
+    'answer': 'abs(X), factor(n), log (X), mod(X, Y), ехр(Х), lcm(A,B), pow(Y), sqrt(A).'
   },
   {
-    title:
-      "Operatsion tizimning rivojlanish tarixi 2-avlod nechinchi yillarni o'z ichiga oladi?",
-    answer: "1955 - 1965",
+    'title': 'MATLAB paketining qaysi o\'rnatilgan funksiyalari mantiqiy funktsiyalar sinfiga kiradi ?',
+    'answer': 'and (M, M), or (M, M), not (M), xor (M, M), any (M), all (M).'
   },
   {
-    title:
-      "Operatsion tizimning rivojlanish tarixi 3 - avlod nechinchi yillarni o'z ichiga oladi?",
-    answer: "1965 - 1980",
+    'title': 'MATLAB funktsiyalari trigonometrik va teskari funktsiyalar sinfiga kiradi ?',
+    'answer': 'cos(X), sin (X), ), tan(X), asin(X), acos(X), atan(X), acot (X, acsc(X), asec(X).'
   },
   {
-    title:
-      "Operatsion tizimning rivojlanish tarixi 4 - avlod nechinchi yillarni o'z ichiga oladi?",
-    answer: "1980 yildan to hozirgacha",
+    'title': 'MATLAB paket funksiyasi matritsani ko\'paytirish amalini bajaradi ?',
+    'answer': 'mtimes (M, M).'
   },
   {
-    title:
-      "Birinchi avlod kompyuterlari analitik mashina kim tamonidan yaratilgan?",
-    answer: "Charles Babbage",
+    'title': 'Qaysi MATLAB paketi funksiyasi matritsa qo\'shish amalini bajaradi ?',
+    'answer': 'plus (M, M)'
   },
   {
-    title: "4-avlod kampyuterlariga qanday kompyuterlar kiradi?",
-    answer: "Personal va super kompyuterlar",
+    'title': 'MATLAB paketining qaysi funksiyasi massivlarni chapdan o\'ngga elementlar bo\'yicha bo\'lish amalini bajaradi ?',
+    'answer': 'rdivide (M, M)'
   },
   {
-    title: "Multipleksing bu?",
-    answer: "resurslar ishlashining ketma - ketligi va davomiyligi",
+    'title': 'MATLAB paketining qaysi funksiyasi massivlarni elementlar bo‘yicha ko‘paytirishni amalga oshiradi ?',
+    'answer': 'times (M, M)'
   },
   {
-    title: "Multipleksingning ikki xil ko'rinishi bor bular?",
-    answer: "Vaqtinchalik, Ajratilgan xotira",
+    'title': 'Matritsani chapdan o\'ngga bo\'lish amalini MATLAB paketining qaysi funksiyasi bajaradi ?',
+    'answer': 'mrdivide(M,M)'
   },
   {
-    title: "Boot Loader - bu?",
-    answer:
-      "Operasion tizimni yuklovchi - bu Boot Record va Sistem Bootstrap dasturli modulidir",
+    'title': 'Qaysi MATLAB funktsiyasi matritsani quvvatga ko\'tarish operatsiyasini bajaradi ?',
+    'answer': 'mpower(M,x)'
   },
   {
-    title: "Interrupts (Uzilish) - bu?",
-    answer:
-      "bir dasturni bajarilishini hozirgi vaqtda yanada muhimroq boshqa dasturni tezkor bajarish maqsadida vaqtincha to'xtatilishidir",
+    'title': 'MATLAB paketining qaysi funksiyasi massivni element-element darajaga ko‘tarish amalini bajaradi ?',
+    'answer': 'power(A,x)'
   },
   {
-    title:
-      "Masalalarni qayta ishlash rejimi bo'yicha operatsion tizimlar sinflanishi?",
-    answer: "bir vazifali , ko'p vazifali",
+    'title': 'MATLAB paket funksiyasi matritsani teskari (o\'ngdan chapga) bo\'lish amalini bajaradi ?',
+    'answer': 'mldivide(M,M)'
   },
   {
-    title: "Prоtsessоr vaqti?",
-    answer: "chegaralangan resurs",
+    'title': 'MATLAB paketining qaysi funksiyasi massivlarni o\'ngdan chapga elementlar bo\'yicha bo\'lish amalini bajaradi ?',
+    'answer': 'ldivide(A,A)'
   },
   {
-    title: "Multidasturlash rejimida ishlaydigan оperatsiоn tizimlar?",
-    answer: "rivоjlanish 3-davriga yuzaga keldi",
+    'title': 'MATLAB paketi funksiyasi nima n sonining tub omillarini o\'z ichiga olgan qator vektorini qaytaradi (funktsiya massivlar uchun qo\'llanilmaydi) ?',
+    'answer': 'factor(n)'
   },
   {
-    title:
-      "Kоmpyuter tarkibiga kiruvchi turli qurilmalarni bоshqaruvchi maxsus dasturlar ..... .deb ataladi?",
-    answer: "drayverlar",
+    'title': 'MATLAB paketi funksiyasi nima butun A va B massivlarining mos elementlarining eng katta umumiy boʻluvchilarini oʻz ichiga olgan massivni qaytaradi ?',
+    'answer': 'gcd(A, В)'
   },
   {
-    title:
-      "Fоydalanuvchi tizim bilan ishlayotgan vaqtda, u o'rnatadigan parametrlarni qisqartirish, parametrlarni o'rnatish vaqtini tejashga imkоn beradigan printsip?",
-    answer: "standart xоlatlar (pо umоl-chaniyu) printsipi",
+    'title': 'MATLAB paketi funksiyasi nima musbat butun sonlarni o\'z ichiga olishi va bir xil o\'lchamga ega bo\'lishi kerak bo\'lgan A va B massivlarining mos juftlangan elementlari uchun eng kichik umumiy ko\'paytmalarni qaytaradi ?',
+    'answer': 'lcm(A,B)'
   },
   {
-    title: "Qanday axbоrоtlar se-curity accounts manag-er da saqlanadi?",
-    answer: "fоydalanuvchilarning qayd yo-zuvi haqidagi",
+    'title': 'MATLAB paketi funksiyasi nima har bir element Y bo\'lgan X massivni qaytaradi ?',
+    'answer': 'pow(Y)'
   },
   {
-    title:
-      "Tarmоq оperatsiоn tizimining qaysi qismi ma`lumоtlarni adreslash, buferlash, va uzatilishidagi xavfsizlikni ta`minlaydi?",
-    answer: "kоmmunikatsiоn vоsitalar",
+    'title': 'MATLAB paketi funksiyasi nima n dan kichik yoki teng tub sonlar qator vektorini qaytaradi ?',
+    'answer': 'primes(n)'
   },
   {
-    title: "Tizimli dasturiy ta`minоt bu?",
-    answer:
-      "kоmpyuter tizimining dastur-lari va bevоsita apparat ta`minоti bilan o'zarо bоglan- ishini ta`minlaydi",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy kosinusini qaytaradi ?',
+    'answer': 'acos(X)'
   },
   {
-    title: "Mоnоlit ОT larda tuzilishi?",
-    answer: "2 ta bo'lakdan ibоrat (bоsh dastur va prоtseduralar)",
+    'title': 'Qaysi MATLAB funktsiyasi X ning har bir elementi uchun yoy tangensini qaytaradi ?',
+    'answer': 'acot(X)'
   },
   {
-    title: "Zamоnaviy ОT larda xоtira?",
-    answer: "segment sahifali bo'linadi",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy kosekantini qaytaradi ?',
+    'answer': 'acsc(X)'
   },
   {
-    title: "Amaliy dasturiy ta`minоt?",
-    answer:
-      "ma`lum ish jоyida aniq ma-salalarni yechishga yordam beradigan dastur",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun arcsekantni qaytaradi ?',
+    'answer': 'asek(X)'
   },
   {
-    title: "Operatsion tizim asoson ...?",
-    answer: "tizimli dasturlar jamlanmasi",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun arksinusni qaytaradi ?',
+    'answer': 'asin(X)'
   },
   {
-    title: "Operatsion tizimda hisoblash tizimining tarkibi bu?",
-    answer: "Konfiguratsiya",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy tangensini qaytaradi ?',
+    'answer': 'atan(X)'
   },
   {
-    title:
-      "Quyidagilardan qaysi biri Operatsion tizimning asosiy tashkil etuvchilari hisoblaniladi?",
-    answer: "Yadro, kiritish-chiqarish tizimi, kamanda prosessori, fayl tizimi",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun kosinusni qaytaradi ?',
+    'answer': 'cos(X)'
   },
   {
-    title: "Operatsion tizimning asosiy tashkil etuvchisi yadro bu?",
-    answer:
-      "masalalar va resurslarni boshqarish, sinxronlashtirish va o'zaro bog'lanish bo'yicha asos funksiyalarni ta'minlaydi.",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun kotangentni qaytaradi ?',
+    'answer': 'cot(X)'
   },
   {
-    title:
-      "Operatsion tizimning asosiy tashkil etuvchisi kiritish - chiqarish tizimi bu?",
-    answer:
-      "tashqi qurilmalar bilan ma'lumotlarni kiritish-chiqarish masalasini ta'minlaydi.",
+    'title': 'MATLAB paketi funksiyasi nima X elementlarning sekantini qaytaradi ?',
+    'answer': 'sec(X)'
   },
   {
-    title:
-      "Operatsion tizimning asosiy tashkil etuvchisi kamanda prosessori bu?",
-    answer:
-      "komandalarni qabul qilish va ularga ishlov berish, foydalanuvchi talabi bo'yicha mos xizmatlarni chaqirishni ta'minlaydi",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun sinusni qaytaradi ?',
+    'answer': 'sin(X)'
   },
   {
-    title: "Operatsion tizimning asosiy tashkil etuvchisi fayl tizimi bu?",
-    answer:
-      "kataloglar bilan ishlash uchun keng hizmat (servis) imkoniyatlarini beradi.",
+    'title': 'MATLAB paketi funksiyasi nima X ning har bir elementi uchun tangensni qaytaradi ?',
+    'answer': 'tan(X)'
   },
   {
-    title: "Operatsion tizim interfeysi bu?",
-    answer: "Foydalanuvchi aloqa o'rnatadigan qulay qobiq",
+    'title': 'MATLAB da qaysi buyruq satr segmentlarini chizadi ?',
+    'answer': 'plot'
   },
   {
-    title: "Buyruq interpretatori bu?",
-    answer: "Dastur tilidan mashina tiliga o'giradi (Tarjimon)",
+    'title': 'MATLAB da shtrixli diagramma tuzish buyrug\'i nima ?',
+    'answer': 'bar'
   },
   {
-    title: "Kompyuter tashkil etuvchisi bu?",
-    answer: "Turli xil qurilmalarni boshqarish dasturi",
+    'title': 'MATLABda gistogramma tuzish buyrug\'i qanday ?',
+    'answer': 'hist'
   },
   {
-    title: "Xоtiraning fiksirlangan bo'limlarga bo'lishda?",
-    answer: "xоtira qat`iy o'lchamli bo'lak-larga оldindan bo'lingan bo'ladi",
+    'title': 'MATLABda narvon grafigini qurish buyrug\'i qanday ?',
+    'answer': 'stairs'
   },
   {
-    title: "Matn muharriri Word bu?",
-    answer: "amaliy dasturiy",
+    'title': 'Qaysi buyruq logarifmik masshtabda grafik chizadi ?',
+    'answer': 'loglogx'
   },
   {
-    title: "Fragmentattsiya deb nimaga aytiladi?",
-    answer: "xоtira bo'limlarga ajratilganda qоladigan bo'l jоyi",
+    'title': 'Yarim logarifmik masshtabda grafik chizilgan qaysi buyruq ?',
+    'answer': 'semilogx'
   },
   {
-    title: "mv buyrug'ug'i qanday vazifani bajaradi?",
-    answer: "Faylni qayta nomlash, nusxa olish",
+    'title': 'Qaysi buyruqlar funksiyaning diskret namunalarini chizadi ?',
+    'answer': 'stem'
   },
   {
-    title: "Tizimli dasturiy taminоt nechtaga bo'linadi?",
-    answer: "3",
+    'title': 'qutbli koordinatalarda grafik chizadi ?',
+    'answer': 'polar'
   },
   {
-    title: "Windows server bu qaysi kompaniyaga tegishli?",
-    answer: "Microsoft",
+    'title': 'Qaysi buyruq burchakli histogrammalarni tuzadi ?',
+    'answer': 'rose'
   },
   {
-    title: "Unix operatsion tizimi qachon yaratilgan?",
-    answer: "1960",
+    'title': 'Qaysi buyruq vektorlarni chizadi ?',
+    'answer': 'compass'
   },
   {
-    title: "Unix operatsion tizimi qaysi laboratoriyada ishlab chiqilgan?",
-    answer: "AT&T'S Bell laboratories",
+    'title': 'Vektorlarning tekislikka proyeksiyalari grafigini qaysi buyruq tuzadi ?',
+    'answer': 'pat'
   },
   {
-    title: "Matn redaktоri Word bu?",
-    answer: "amaliy dasturiy",
+    'title': 'chizmalarini yaratish uchun qanday buyruq ishlatiladi ?',
+    'answer': 'kontur'
   },
   {
-    title: "Quyidagilardan qaysi biri Linux serveri hisoblanadi?",
-    answer: "Ubuntu, Debian, CentOS",
+    'title': 'Qaysi buyruq uch o\'lchovli grafiklar uchun ma\'lumotlar massivlarini yaratadi ?',
+    'answer': 'meshgrid'
   },
   {
-    title: "Ubuntu server qaysi kompaniya tamonidan ishlab chiqilgan?",
-    answer: "Canonical",
+    'title': 'Qaysi komanda Gradient maydon grafiklarini quradi ?',
+    'answer': 'quiver'
   },
   {
-    title: "Operatsion tizim nima?",
-    answer:
-      "operatsion tizim bu foydalanuvchi va kompyuter o'rtasidagi muloqatni ta'minlab beruvchi dasturlar jamlanmasi",
+    'title': 'Qaysi komanda sirt grafikasini quradi ?',
+    'answer': 'plot'
   },
   {
-    title:
-      "Quyidagilardan qaysi biri Unix serverga o'xshash server operatsion tizim hisoblanadi?",
-    answer: "Solarius, Linux",
+    'title': 'Qaysi funksiya buyrug`i bo\'yash bilan to\'rli D-uchastkalarini hosil qiladi ?',
+    'answer': 'mesh'
   },
   {
-    title:
-      "Windows operatsion tizimida buyruqlar qatorini (cmd) qaysi klavishlar yordamida bosiladi?",
-    answer: "Win + R",
+    'title': 'Qaysi funksiya buyrug`i proyeksiyalar bilan to\'rlangan D- uchastkalarini hosil qiladi ?',
+    'answer': 'meshс'
   },
   {
-    title: "Qanday axbоrоtlar security accounts manager da saqlanadi?",
-    answer: "fоydalanuvchilarning qayd yo-zuvi haqidagi",
+    'title': 'Qaysi komanda sirt ustunlarini hosil qiladi ?',
+    'answer': 'meshz'
   },
   {
-    title:
-      "Operatsion tizimning rivojlanish tarixi 1 - avlod nechinchi yillarni o'z ichiga oladi?",
-    answer: "1945 - 1955",
+    'title': 'Qaysi komanda bo\'yalgan yuzalarni hosil qiladi ?',
+    'answer': 'surf'
   },
   {
-    title:
-      "Operatsion tizimning rivojlanish tarixi 2 - avlod nechinchi yillarni o'z ichiga oladi?",
-    answer: "1955 - 1965",
+    'title': 'Qaysi komanda yuzalar va uning proyeksiyalarini  hosil qiladi ? ?',
+    'answer': 'surfc'
   },
   {
-    title:
-      "Tizimda paydo bo'lgan har bir yangi jarayon quyidagicha davom etadi?",
-    answer: "Tayyor holatda",
+    'title': 'Qaysi komanda  yoritilgan yuzalarni hosil qiladi?',
+    'answer': 'surfl'
   },
   {
-    title: "Jarayon quyidagi sabablarga ko'ra ishlaydigan holatdan chiqadi?",
-    answer: "Barcha javoblar to'g'ri",
+    'title': 'Qaysi komanda uchta o\'zgaruvchili funksiyalar bo\'limlari grafiklarini hosil qiladi ?',
+    'answer': 'surfl'
   },
   {
-    title: "Tizimdagi jarayonlar sonini o'zgartiradigan operatsiyalar?",
-    answer: "Bir martalik operatsiyalar",
+    'title': 'Qaysi komanda uch o\'lchamli qatlamli sirtlarning grafikasini hosil qiladi ?',
+    'answer': 'sharshara'
   },
   {
-    title: "Ushbu operatsion tizimlarning qaysi biri ochiq manba hisoblanadi?",
-    answer: "Linux",
+    'title': 'Qaysi jamoa quradi 3D kontur chizmalari ?',
+    'answer': 'contour'
   },
   {
-    title: "Protsessor vaqti?",
-    answer: "cheklangan resurs",
+    'title': 'Qaysi buyruq to\'ldirilgan tekis ko\'pburchak chizadi ?',
+    'answer': 'fill'
   },
   {
-    title: "Xotirani sobit bo'limlarga ajratishda?",
-    answer: "Xotira oldindan aniq o'lchamdagi aniq bo'limlarga bo'linadi",
+    'title': 'Qaysi buyruq elektron rang shkalasini chop etadi ?',
+    'answer': 'colorbar'
   },
   {
-    title:
-      "Qaysi avlod tizimlaridan boshlab operatsion tizimlar o'rnatila boshlagan?",
-    answer: "2 - avlod",
+    'title': 'Qaysi buyruq doiraviy diagramma chizadi ?',
+    'answer': 'pie'
   },
   {
-    title:
-      "Nechilchi yillardan boshlab paketli operatsion tizimlar ishlab chiqarilgan?",
-    answer: "1960 yil",
+    'title': 'Qaysi buyruq bo\'shliqqa to\'ldirilgan ko\'pburchak chizadi ?',
+    'answer': 'fill'
   },
   {
-    title: "4 - avlod kampyuterlariga qanday kompyuterlar kiradi?",
-    answer: "Personal va super kompyuterlar",
+    'title': 'Qaysi jamoa 3 o`lchamli doiraviy diagrammalarni tuzadi ?',
+    'answer': 'pie'
   },
   {
-    title: "Multipleksing necha xil ko'rinishda bo'ladi?",
-    answer: "2",
+    'title': 'Qaysi buyruq silindrni uch o\'lchamli figura shaklida chizadi ?',
+    'answer': 'cyinder'
   },
   {
-    title: "Trap bu?",
-    answer:
-      "operasion tizim va hisoblash tizimlarida bu istisno yoki xatolik deb qabul qilinadi",
+    'title': 'Sferani qaysi buyruq qurmoqda ?',
+    'answer': 'sphere'
   },
   {
-    title: "Ierarxiyadagi eng tezkor va eng qimmat xotira?",
-    answer: "Protsessor registrlari",
+    'title': 'Qaysi buyruq uchburchaklar bilan uch o\'lchamli sim ramka shakllarini yaratadi ?',
+    'answer': 'trimesh'
   },
   {
-    title: "Resurslarni samarali boshqarish uchun operatsion tizimlar?",
-    answer: "Resurslarni rejalashtirish va resurslar holatini kuzatish",
+    'title': 'MATLAB da qanday sonlar sinflari ishlatiladi ?',
+    'answer': 'Butun, kasr, qo\'zg\'almas va suzuvchi nuqta, kompleks sonlar ishlatiladi.'
   },
   {
-    title:
-      "Operatsion tizimning asosiy tarkibiy qismlaridan biri - yadro quyidagi funktsiyalarni bajaradi?",
-    answer: "Vazifalar va manbalarni boshqaradi",
+    'title': 'Hisoblash natijasini saqlash uchun MATLAB da qanday tizim o\'zgaruvchisi qo\'llaniladi ?',
+    'answer': 'Ans deb nomlangan o\'zgaruvchi'
   },
   {
-    title:
-      "Hisoblash tizimini boshqarish jarayonlari ma'lum vaqt chegaralarini qondiradigan operatsion tizimlar?",
-    answer: "Haqiqiy vaqt rejimida ishlaydigan operatsion tizimlar",
+    'title': 'MATLAB paketida tizim konstantasini qanday o\'rnatish mumkin eng kichik raqam **(- ) ?',
+    'answer': 'realmin _'
   },
   {
-    title: "Ko'p dasturli va ko'p foydalanuvchili operatsion tizimlar?",
-    answer: "UNIX operatsion tizimlari",
+    'title': 'MATLAB paketida tizim konstantasini qanday o\'rnatish mumkin eng katta raqam bormi **( ) ?',
+    'answer': 'realmax _'
   },
   {
-    title:
-      "Mikroyadorli operatsion tizimlarida mikroyadro quyidagi funktsiyalarni o'z ichiga oladi?",
-    answer: "Minimal talab qilinadigan xususiyatlar",
+    'title': 'MATLAB to\'plamida o\'zgaruvchilarni qanday yozish kerak raqamli massivni bildiring ?',
+    'answer': 'realmax'
   },
   {
-    title:
-      "Modulli printsip yordamida yaratilgan operatsion tizimlarda dastur quyidagilardan iborat?",
-    answer: "Mustaqil qismlardan (modullardan)",
+    'title': 'MATLAB to\'plamida o\'zgaruvchilarni qanday yozish kerak ikki tomonlama aniqlikdagi raqamli massivni bildiring ?',
+    'answer': 'single'
   },
   {
-    title:
-      "Kasperskiy antivirus dasturining korporativ versiyasi, u yirik tarmoqlar uchun mo'ljallangan va ularning xavfsizligini quyidagi xususiyatlar bilan ta'minlaydi?",
-    answer:
-      "Markazlashtirilgan masofadan boshqarish pultini taqdim etadi, to'liq statistik ma'lumotlarni taqdim etadi va katta hajmdagi ma'lumotlar bilan ishlaydi (ma'lumotlar bazasi bilan)",
+    'title': 'MATLAB to\'plamida o\'zgaruvchilarni string massivlari uchun qanday yozish kerak ?',
+    'answer': 'char'
   },
   {
-    title:
-      "Kasperskiy antivirus dasturining shaxsiy versiyasi quyidagi xususiyatlarga ega?",
-    answer: "Qulay o'rnatish va sozlash",
+    'title': 'MATLAB to\'plamida o\'zgaruvchilarni belgili massivlari uchun qanday yozish kerak ?',
+    'answer': 'cell'
   },
   {
-    title:
-      "Ajratilgan birliklar zaxiralari uchun resurslar ham topiladi, shuning uchun ular?",
-    answer: "Muayyan qoidalarga muvofiq tarqatiladi",
+    'title': 'MATLAB to\'plamida o\'zgaruvchilarni qanday yozish kerak tuzilmalar massivini bildiring ?',
+    'answer': 'struct'
   },
   {
-    title: "O'zaro bog'lanish bo'yicha operatsion tizimlar sinflanishi?",
-    answer: "bir foydalanuvchi va ko'p foydalanuvchi",
+    'title': 'MATLAB paketidagi ifoda nimani o\'z ichiga olishi mumkin ?',
+    'answer': 'Ifodada konstantalar, oʻzgaruvchilar, funksiyalar, vektorlar, matritsalar va arifmetik operatorlar boʻlishi mumkin .'
   },
   {
-    title: "Mikrokompyuterlar bu?",
-    answer:
-      "Hajmi va bajaradigan amallar tezligi jihatidan katta kompyuterlardan kamida bir pog'ona pastdir. Shuni aytish joizki, ularning o'lchamlari tobora ixchamlashib, hatto shaxsiy kompyuterdek kichik joyni egallaydiganlari yaratilmoqda",
+    'title': 'MATLAB paketidagi hisob-kitoblar natijasining chiqishini bloklash uchun qaysi belgi ishlatiladi ?',
+    'answer': 'Nuqtali vergul'
   },
   {
-    title: "Super komputerlar bu?",
-    answer:
-      "juda katta tezlikni talab qiladigan va katta hajmdagi masalalarni yechish uchun mo'ljallangan bo'ladi. Bunday masalalar sifatida ob-havoning global prognoziga oid masalalarni, uch o'lchovli fazoda turli oqimlarning kechishini o'rganish masalalarini keltirish mumkin. Bu kompyuterlar bir sekundda 10 trilliardlab amal bajaradi.",
+    'title': 'MATLAB da kiritishni belgilash uchun qaysi belfi ishlatiladi ?',
+    'answer': '>>'
   },
   {
-    title: "Minikompyuterlar - bu ...?",
-    answer:
-      "Hajmi va bajaradigan amallar tezligi jihatidan katta kompyuterlardan kamida bir pog'ona pastdir. Shuni aytish joizki, ularning o'lchamlari tobora ixchamlashib, hatto shaxsiy kompyuterdek kichik joyni egallaydiganlari yaratilmoqda",
+    'title': 'MATLABda ta`minlash operatori uchun  belgi qanday ishlatiladi ?',
+    'answer': 'Tenglik bilan'
   },
   {
-    title: "Tizimli chaqiruv-?",
-    answer:
-      "Operasion tizim va ishlayotgan dastur orasidagi interfeysni taminlab beradi",
+    'title': 'MATLAB paketida ^ belgisi nimani anglatadi ?',
+    'answer': 'Darajaga ko`tarish'
   },
   {
-    title: "Fayl bilan ishlash dasturi?",
-    answer: "Fayl menejeri",
+    'title': 'MATLAB da n : k : m ko\'rinishidagi  operatori qanday yoziladi ?',
+    'answer': 'Ikki nuqta operatori.'
   },
   {
-    title: "Zamonaviy fayllarni boshqarish tizimlari?",
-    answer: "NTFS",
+    'title': 'MATLAB paketida ta`minlash operatori  belgisi qanday ishlatiladi ?',
+    'answer': '"=" belgisi.'
   },
   {
-    title: "Fayl tizimidan foydalanish?",
-    answer:
-      "Ma'lumotlarni qayta ishlash dasturlari bilan bog'laning va disk maydonini markaziy ravishda taqsimlash",
+    'title': 'MATLABda izohni bildirish uchun qanday  belgi ishlatiladi ?',
+    'answer': '"%" belgisi.'
   },
   {
-    title: "Zamonaviy operatsion tizimlarda xotira?",
-    answer: "Har bir segment uchun sahifalar bo'limlari",
+    'title': 'MATLAB paketida elementli operatsiya nima ?',
+    'answer': 'Bir xil indeksli vektor yoki matritsa elementlari ustida bajariladigan amal.'
   },
   {
-    title: "Ochiq manbali operatsion tizimlarda?",
-    answer:
-      "Tizim kodlari ochiq, istalgan foydalanuvchi uni o'zgartirishi mumkin",
+    'title': 'MATLABda  Qanday operator {if – end }shaklida  yoziladi? _',
+    'answer': 'Shartli operator'
   },
   {
-    title: "Ma'lumotlarning xotirada joylashishi?",
-    answer: "Segment",
+    'title': 'MATLABda  Qanday operator {for var  end } shaklida  yoziladi? _',
+    'answer': 'Sikl operatori'
   },
   {
-    title:
-      "Katta hajmga, samarali foydalanishga va alohida avtonom energiya manbasiga ega bo'lgan xotira deyiladi?",
-    answer: "Doimiy xotira",
+    'title': '{while    end } Operatori nimani bajaradi ?',
+    'answer': 'sikl bayonoti'
   },
   {
-    title:
-      "Zamonaviy operatsion tizimlardagi manbalar quyidagilarni anglatadi?",
-    answer:
-      "Protsessor vaqti, xotira, kirish va chiqish kanallari, tashqi qurilmalar, dastur modullari, axborot resurslari, xabarlar va signallar",
+    'title': 'Qaysi funksiya identifikatsiya matritsasini yaratadi?',
+    'answer': 'еуе'
   },
   {
-    title: "Ko'p masalali OT ga qaysilar kiradi?",
-    answer: "Windows, Unix, OS/2",
+    'title': 'Qaysi funksiya identifikatsiya elementlari bilan matritsa yaratadi?',
+    'answer': 'ones'
   },
   {
-    title: "Operatsion tizim qobiqlari?",
-    answer:
-      "Foydalanuvchi uchun tizim funksiyalaridan unumli foydalanish interfeysini ta'inlab beruvchi dasturlar",
+    'title': 'Qaysi funksiya nol elementli matritsa hosil qiladi?',
+    'answer': 'zeros'
   },
   {
-    title: "Quyidagi dasturlardan qaysi birlari grafik muxarrir hisoblanadi?",
-    answer: "Paint, Adobe Photoshop",
+    'title': 'Qaysi funksiya tasodifiy elementlardan iborat matritsa hosil qiladi?',
+    'answer': 'rand'
   },
   {
-    title: "FAT32, Ext2, NTFS - bu …?",
-    answer: "Paint, Adobe Photoshop",
+    'title': 'Massivlarni qaysi funksiya birlashtiradi?',
+    'answer': 'cat'
   },
   {
-    title:
-      "Quyidagi operatsion tizimlardan qaysi biri bitta foydalanuvchi va bitta dasturli operatsion tizimdir?",
-    answer: "MS DOS",
+    'title': 'Qaysi funksiya berilgan diagonalli matritsa hosil qiladi?',
+    'answer': 'diag'
   },
   {
-    title:
-      "UNIX operatsion tizimining osongina ko'chirilishi yoki ko'chirilish xususiyati sababi?",
-    answer:
-      "Operatsion tizim kodlari yuqori darajadagi tilda yozilgan (masalan, C)",
+    'title': 'Massiv elementlarini ko‘paytirish uchun qaysi funksiyadan foydalaniladi?',
+    'answer': 'prod'
   },
   {
-    title: "Tarmoq operatsion tizimi deganda keng tushuniladi?",
-    answer:
-      "Xabar almashish va resurslarni birgalikda ishlatish uchun o'zaro ta'sir qiluvchi individual kompyuterlarning operatsion tizimlari to'plami yagona qoidalar - protokollar",
+    'title': 'Massivlar elementlarini jamlash uchun qanday funksiyadan foydalaniladi?',
+    'answer': 'sum'
   },
   {
-    title:
-      "Foydalanuvchiga u yoki bu turga kirishga imkon beradigan huquqlar to'plami deyiladi (NTFS fayl tizimida)?",
-    answer: "Shaxsiy ruxsatnomalar",
+    'title': 'Matritsalarning uchburchak qismlarini tanlash uchun qaysi funksiyadan foydalaniladi?',
+    'answer': 'tril'
   },
   {
-    title: "Fayllarni boshqarish tizimi quyidagi funksiyalarni bajaradi?",
-    answer: "fayl operatsiyalari va foydalanuvchi interfeysi funktsiyalari",
+    'title': 'Matritsalar normasini qaysi funksiya hisoblaydi?',
+    'answer': 'norm'
   },
   {
-    title:
-      "Boshqarish mexanizmlari bilan protsessor vaqtining 90 foizini egallaydigan va nisbatan past ko'rsatkichlarga ega bo'lgan eng xavfsiz operatsion tizimlar quyidagilar?",
-    answer: "A sinf",
+    'title': 'Matritsaning determinantini (determinantini) topish uchun qanday funksiyadan foydalaniladi ?',
+    'answer': 'det'
   },
   {
-    title:
-      "Windows operatsion tizimining boshqa operatsion tizimlardan tubdan farqi nimada?",
-    answer: "GUI va bir nechta dasturlarni ishlatish qobiliyati",
+    'title': 'Matritsaning darajasini hisoblash uchun qanday funktsiyadan foydalaniladi ?',
+    'answer': 'rank'
   },
   {
-    title:
-      "Shaxsiy kompyuterlar uchun mo'ljallangan va bir nechta operatsion tizimlarni qo'llab-quvvatlaydigan birinchi ko'p dasturli, ko'p vazifali, ishonchli operatsion tizim?",
-    answer: "OS / 2",
+    'title': 'Qaysi funksiya matritsaning izini qaytaradi?',
+    'answer': 'trace'
   },
   {
-    title:
-      "Tarmoq operatsion tizimlari funktsiyalarning ajratilishiga qarab tasniflanadi?",
-    answer: "Bir martalik tarmoq OS va maxsus serverlarga ega OS",
+    'title': '“ones” funksiyasi nima uchun kerak?',
+    'answer': 'elementlari birdan iborat massivlar yaratish'
   },
   {
-    title:
-      "Tarmoq operatsion tizimlarini yaratishda bir nechta yondashuvlar mavjud bular?",
-    answer:
-      "Mahalliy operatsion tizimlar va qobiq, tarmoq funktsiyalari boshidanoq hisobga olingan",
+    'title': '“zeros” funksiyasining maqsadi nima?',
+    'answer': 'nol elementli massivlarni yaratish'
   },
   {
-    title:
-      "Tarmoq operatsion tizimining masofaviy manbalar va xizmatlarga kirishni ta'minlovchi qismi?",
-    answer: "Mijozlar qismi",
+    'title': '“Rand” va “randn” funksiyalari nima uchun ishlatiladi?',
+    'answer': '- mos ravishda bir xil va normal taqsimlangan tasodifiy sonlar massivini yaratadi'
   },
   {
-    title:
-      "O'z resurslarini ommaviy ravishda taqdim etadigan tarmoq operatsion tizimining bir qismi?",
-    answer: "Server qismi",
+    'title': 'Qaysi funksiya massivning o‘lchamini qaytaradi (agar u katta yoki teng bo‘lsa)?',
+    'answer': 'ndims'
   },
   {
-    title: "Tor ma'noda tarmoq operatsion tizimlari?",
-    answer:
-      "Shaxsiy kompyuterning tarmoqda ishlashini ta'minlaydigan operatsion tizimlari",
+    'title': 'Qatorlarni ustunlar bilan  teskarisiga  almashtirish ___ deyiladi.',
+    'answer': 'transponerlash'
   },
   {
-    title:
-      "Vazifalari: uni ko'rish, qo'shish, o'qish, yozish va o'zgartirish (NTFS fayl tizimida) bu?",
-    answer: "standart qarorlari",
+    'title': 'Barcha birlik oʻlchamlari olib tashlangan massivni qaytaruvchi funksiya.',
+    'answer': 'squeeze'
   },
   {
-    title: "NTFS fayl tizimi?",
-    answer: "Yangi texnologik fayl tizimi",
+    'title': 'Strukturani yaratish funktsiyasi',
+    'answer': 'struct'
   },
   {
-    title: "Haqiqiy vaqtdagi operatsion tizimlar ana shunday tizimlardir bu?",
-    answer:
-      "Kiruvchi ishlarni belgilangan vaqt oralig'ida qayta ishlashni oshirib yubormaslik",
+    'title': 'Tuzilma maydonlarining nomlarini qaytaruvchi funksiya',
+    'answer': 'fieldnames'
   },
-];
+  {
+    'title': 'Tuzilish maydonini belgilash funktsiyasi',
+    'answer': 'setfield'
+  },
+  {
+    'title': 'Tuzilish maydonlarini olib tashlash funktsiyasi',
+    'answer': 'rmfield'
+  },
+  {
+    'title': 'O\'chirilishi kerak bo\'lgan FIELDS maydonlari ro\'yxati quyidagicha ko\'rsatilgan:',
+    'answer': 'maydonlar massivi'
+  },
+  {
+    'title': 'Qaysi tasvir formati uchta rangdagi intensivlik massivlaridan iborat - qizil, yashil va ko\'k:',
+    'answer': 'JPG'
+  },
+  {
+    'title': 'Qaysi funksiya hujayra massivini yaratadi?',
+    'answer': 'cell'
+  },
+  {
+    'title': 'Qaysi funksiya massivi yacheykasini aks ettiradi?',
+    'answer': 'celldisp'
+  },
+  {
+    'title': 'Qaysi funksiya belgilar massividan katakchalar qatorini yaratadi?',
+    'answer': 'cellstr'
+  },
+  {
+    'title': 'Qaysi funktsiya kirish ma\'lumotlarini chiqish ma\'lumotlariga bir necha marta belgilashni ta\'minlaydi?',
+    'answer': 'deal'
+  },
+  {
+    'title': 'Hujayra massivlarini tekshirish uchun qanday funksiyadan foydalaniladi?',
+    'answer': 'iscell'
+  },
+  {
+    'title': 'Qaysi funksiya raqamlar massivini hujayralar massiviga aylantiradi?',
+    'answer': 'numcell'
+  },
+  {
+    'title': 'Qaysi funksiya hujayralar massivini strukturalar massiviga aylantiradi?',
+    'answer': 'cellstruct'
+  },
+  {
+    'title': 'Matematik model nima ?',
+    'answer': 'O\'rganilayotgan ob\'ektning modeli bo\'lgan chiziqli yoki chiziqli bo\'lmagan tenglamalar va tengsizliklar tizimi.'
+  },
+  {
+    'title': 'Hisoblash tajribasi nima  ?',
+    'answer': 'Matematik model va raqamli usul yordamida o\'rganilayotgan ob\'ekt, jarayon yoki hodisani o\'rganish usuli bilan .'
+  },
+  {
+    'title': 'Raqamli usul nima ?',
+    'answer': 'Bu kompyuterda amalga oshirish uchun mavjud bo\'lgan matematik modelning talqini.'
+  },
+  {
+    'title': 'Muammoni hal qilishning qaysi bosqichida yechimning yakuniy maqsadlari aniqlanadi va -jismoniy ¬jarayonning asosiy qonunlarini to\'g\'ri (adekvat) tavsiflashi kerak bo\'lgan matematik model quriladi ?',
+    'answer': 'Muammo bayoni'
+  },
+  {
+    'title': 'Muammoni hal qilishning qaysi bosqichida muammoni qandaydir hisoblash ¬algoritmiga qisqartiradigan raqamli usulni topish kerak ?',
+    'answer': 'Raqamli usulni ishlab chiqish'
+  },
+  {
+    'title': 'Yakuniy natijaga olib keladigan elementar arifmetik va mantiqiy amallar ketma-ketligi sifatida yozilgan masalani yechish jarayoni qaysi bosqich hisoblanadi ?',
+    'answer': 'Algoritm ishlab chiqish va blok-sxema qurish'
+  },
+  {
+    'title': 'Muammoni hal qilish algoritmi qaysi bosqichda aniq belgilangan amallar ketma-ketligi ko\'rinishida yoziladi va dastur nazorat qilinadi ¬, xatolar diagnostika qilinadi va ular tuzatiladi?',
+    'answer': 'Dasturni dasturlash va disk raskadrovka'
+  },
+  {
+    'title': 'Qaysi bosqichda hisob-kitoblar uchun dastlabki ma\'lumotlar tayyorlanadi va hisob yaxshi ishlaydigan dastur bo\'yicha amalga oshiriladi?',
+    'answer': 'Hisob-kitoblarni amalga oshirish'
+  },
+  {
+    'title': 'Matematik modelga qo\'yiladigan asosiy talab nima ?',
+    'answer': 'Bu uning etarliligi ko\'rib chiqilayotgan ob\'ekt.'
+  },
+  {
+    'title': 'Vazifa barqarorligi nima ?',
+    'answer': 'muammoning manba ma\'lumotlaridagi noaniqliklarga sezgirligi.'
+  },
+  {
+    'title': 'Muammoni hal qilish algoritmi nima ?',
+    'answer': 'Bu yakuniy natijaga olib keladigan elementar arifmetik va mantiqiy operatsiyalar ketma-ketligi.'
+  },
+  {
+    'title': 'SLE A*X=B ni manfiy bo\'lmagan cheklovlar bilan eng kichik kvadratlar usuli bilan yechish :',
+    'answer': 'х =isqnonneg(A,B)'
+  },
+  {
+    'title': 'Kvadrat konjugat gradient usuli MATLAB tizimida quyidagilar yordamida amalga oshiriladi:',
+    'answer': 'cgs funksiyalari'
+  },
+  {
+    'title': 'Umumlashtirilgan qoldiqni minimallashtirishning iterativ usuli MATLAB tizimida amalga oshiriladi:',
+    'answer': 'funktsiya gmres :'
+  },
+  {
+    'title': 'Gradientlarining iterativ usuli amalga oshiriladi:',
+    'answer': 'qoziq funktsiyasi'
+  },
+  {
+    'title': 'Fzero funksiyasining maqsadi nima MATLAB paketida ?',
+    'answer': 'Berilgan funksiyaning ildizlarini hisoblash uchun.'
+  },
+  {
+    'title': 'Fminbnd funksiyasining maqsadi nima MATLAB paketida ?',
+    'answer': 'Berilgan funksiyaning minimalini hisoblash uchun.'
+  },
+  {
+    'title': 'MATLAB paketidagi funktsiya oldida minus belgisi bo\'lgan fminbnd funksiyasining maqsadi nima ?',
+    'answer': 'Berilgan funksiyaning maksimalini hisoblash uchun.'
+  },
+  {
+    'title': 'MATLAB paketidagi funktsiya oldida minus belgisi bo\'lgan fminsearch funksiyasining maqsadi nima ?',
+    'answer': 'Bir qator oʻzgaruvchilar funksiyasining local minimumini hisoblash uchun.'
+  },
+  {
+    'title': 'MATLAB da trapz funksiyasining maqsadi nima ?',
+    'answer': 'Raqamli integratsiya uchun.'
+  },
+  {
+    'title': 'Qaysi funksiya namunalar orasidagi birlik pog\'onali trapesiya integratsiyasi yordamida aniq integralni qaytaradi ?',
+    'answer': 'trapz(Y)'
+  },
+  {
+    'title': 'Qaysi hal qiluvchi ko\'p bosqichli Adams-Bashworth-Multon o\'zgaruvchan tartib usulini qo\'llaydi ?',
+    'answer': 'ode'
+  },
+  {
+    'title': 'Qaysi hal qiluvchi - va - tartibli bir bosqichli aniq Runge-Kutta usullarini amalga oshiradi ?',
+    'answer': 'ode'
+  },
+  {
+    'title': 'Polinomni qayta ishlash funktsiyasi sifatida n x n o\'lchamli A kvadrat matritsasi uchun n+ o\'lchamdagi qator vektorini qaytaradi ?',
+    'answer': 'poli(A)'
+  },
+  {
+    'title': 'Musbat butun sonlardan iborat X massivni (dan dan gacha raqamli kodlar) MATLAB belgilar massiviga aylantirish uchun quyidagidan foydalaning.',
+    'answer': 'char (X)'
+  },
+  {
+    'title': 'S satrining belgilarini raqamli kodlarga aylantirish va ushbu raqamli kodlar bilan vektorni qaytarish uchun funktsiya',
+    'answer': 'double(S)'
+  },
+  {
+    'title': 'Agar S ramziy o\'zgaruvchi bo\'lsa, mantiqiyni, aks holda mantiqiy nolni qaytarish uchun funktsiyadan foydalaning.',
+    'answer': 'ishora(S)'
+  },
+  {
+    'title': 'Argumentdan olingan satrni qaytarish uchun - oxiridan bo\'sh joylar olib tashlangan str qatori; vazifasini bajaradi',
+    'answer': 'deblank(str)'
+  },
+  {
+    'title': 'Qaysi funksiya ASCII belgilarda ifodalangan s sonli qatorni ikkilamchi aniqlikdagi songa aylantiradi?',
+    'answer': 'strdouble (\'str\')'
+  },
+  {
+    'title': 'Qaysi funktsiya ASCII belgilarda ifodalangan sonli belgilar massivini - matritsa yoki s qatorini matritsaga (o\'lchov massivi) aylantiradi?',
+    'answer': 'strnum(lar)'
+  },
+  {
+    'title': 'ikkilik belgilar qatoriga ekvivalent o‘nlik sonni qaytaradi ?',
+    'answer': 'bindec(\'binarystr\')'
+  },
+  {
+    'title': 'Qaysi funksiya d kasr sonini n asosdagi son sifatida ifodalovchi belgilar qatorini qaytaradi?',
+    'answer': 'decbase(dn)'
+  },
+  {
+    'title': 'Qaysi buyruq ekranni tozalaydi va kursorni bo\'sh ekranning yuqori chap burchagiga qo\'yadi ?',
+    'answer': 'clc bilan'
+  },
+  {
+    'title': 'Qaysi buyruq kursorni oynaning yuqori chap burchagiga qaytaradi ?',
+    'answer': 'home'
+  },
+  {
+    'title': 'Qaysi buyruq peyjing rejimini yoqadi ?',
+    'answer': 'mоrе on'
+  },
+  {
+    'title': 'Qaysi buyruq ekranda barcha m-fayllar matnini ko\'rsatish rejimini yoqadi ?',
+    'answer': 'echo on all'
+  },
+  {
+    'title': 'Vektor va matritsalardagi eng oddiy arifmetik operatorlar belgilardir',
+    'answer': '+, -, *, /, ^'
+  },
+  {
+    'title': 'Vektor va matritsalardagi qaysi operatorlar + belgilarini bajaradi , -, *, /, ^',
+    'answer': 'arifmetikaga'
+  },
+  {
+    'title': 'Vektorlar va matritsalardagi arifmetik operatorlar belgini o\'z ichiga oladi',
+    'answer': '-'
+  },
+  {
+    'title': 'Vektorlar va matritsalardagi arifmetik operatorlar belgini o\'z ichiga oladi',
+    'answer': '*'
+  },
+  {
+    'title': 'Vektorlar va matritsalardagi arifmetik operatorlar belgini o\'z ichiga oladi',
+    'answer': '/'
+  },
+  {
+    'title': 'Vektorlar va matritsalardagi arifmetik operatorlar belgini o\'z ichiga oladi',
+    'answer': '^'
+  },
+  {
+    'title': 'Qaysi operator o\'ngdan chapga bo\'linishni anglatadi',
+    'answer': '\\'
+  },
+  {
+    'title': 'Quyidagi operatorlardan qaysi biri o\'ngdan chapga bo\'linishni anglatadi',
+    'answer': '\\'
+  },
+  {
+    'title': '\\ operator anglatadi',
+    'answer': 'o\'ngdan chapga bo\'linish'
+  },
+  {
+    'title': 'Quyidagi operatorlardan qaysi biri ko‘paytirishni bildiradi',
+    'answer': '*'
+  },
+  {
+    'title': 'Quyidagi operatorlardan qaysi biri darajani bildiradi',
+    'answer': '^'
+  },
+  {
+    'title': 'Quyidagi operatorlardan qaysi biri bo‘linishni anglatadi',
+    'answer': '/'
+  },
+  {
+    'title': '.* operatori nimani anglatadi?',
+    'answer': 'massivlarni elementlar bo\'yicha ko\'paytirish'
+  },
+  {
+    'title': 'Massivni elementlar bo‘yicha ko‘paytirish va massivni ko‘paytirish operatorlari o‘rtasidagi farq nima?',
+    'answer': 'ko\'paytirish belgisidan oldin nuqta qo\'ying'
+  },
+  {
+    'title': 'Qaysi operator massivlarni elementlarga bo‘linishini bildiradi',
+    'answer': './'
+  },
+  {
+    'title': 'Qaysi operator massivlarni elementga ajratadi ?',
+    'answer': './'
+  }
+]
 
-async function search(info) {
-  var searchstring = info.selectionText;
+
+async function search(info, tab) {
+  var searchstring = info.selectionText
   const question =
-    questions.find(
-      (item) =>
-        item.title === searchstring.trim() ||
-        item.title.includes(searchstring.trim())
-    ) || "";
+      questions.find(
+          (item) =>
+              item.title === searchstring.trim() ||
+              item.title.includes(searchstring.trim())
+      ) || ''
 
   if (question) {
-    count++;
-    chrome.notifications.create(`test-${count}`, {
-      type: "basic",
-      iconUrl: "./images/icon16.png",
-      title: "Answer",
-      message: question.answer,
-      priority: 2,
-    });
-    setTimeout(() => {
-      chrome.notifications.clear(`test-${count}`);
-    }, 2500);
+    count++
+    chrome.tabs.sendMessage(tab.id, {type: 'showToast', text: question?.answer})
+    // chrome.notifications.create(`test-${count}`, {
+    //   type: 'basic',
+    //   iconUrl: './images/icon16.png',
+    //   title: 'Answer',
+    //   message: question.answer,
+    //   priority: 2
+    // })
+    //
+    // setTimeout(() => {
+    //   chrome.notifications.clear(`test-${count}`)
+    // }, 2500)
   }
 }
 
 chrome.contextMenus.create({
-  title: "Qidirish",
-  contexts: ["selection"],
-  onclick: search,
-});
+  title: 'Qidirish',
+  contexts: ['selection'],
+  onclick: search
+})
+

@@ -1,0 +1,2221 @@
+++++
+MATLAB to'plami nima ?
+====
+#yuqori darajadagi dasturlash tili texnik hisoblash uchun .
+====
+massivlarni qayta ishlash uchun yuqori darajadagi dasturlash tili .
+====
+yuqori darajadagi dasturlash tili raqamlarni qayta ishlash uchun.
+====
+yuqori darajadagi dasturlash tili satrlarni qayta ishlash uchun.
+
+++++
+MATLAB seansini saqlash uchun qanday kengaytma ishlatiladi ?
+====
+#kengaytmali faylda saqlanishi mumkin . mat
+====
+Seans kengaytmali faylda saqlanishi mumkin . db
+====
+Seans kengaytmali faylda saqlanishi mumkin . mdb
+====
+Seans kengaytmali faylda saqlanishi mumkin . Xabar
+
+
+++++
+Qaysi buyruq ekranni tozalaydi va kursorni bo'sh ekranning yuqori chap burchagiga qo'yadi ?
+====
+ # clc bilan
+====
+Uy
+====
+m o r e on
+====
+hammaga aks-sado
+
+
+++++
+Qaysi buyruq kursorni oynaning yuqori chap burchagiga qaytaradi ?
+====
+ # home
+====
+  Clс
+====
+  mоrе on
+====
+  echo on all
+
+++++
+Qaysi buyruq peyjing rejimini yoqadi ?
+====
+
+ # mоrе on
+====
+  clс
+====
+  home
+====
+  echo on all
+
+
+++++
+Qaysi buyruq ekranda barcha m-fayllar matnini ko'rsatish rejimini yoqadi ?
+====
+====
+ # echo on all
+====
+  clс
+====
+  Home
+====
+  mоrе on
+
+++++
+MATLAB da vektor nima ?
+====
+# Vektor - bu bo'shliqlar bilan ajratilgan va kvadrat qavs ichiga olingan raqamlar .
+====
+Vektor - bu bo'shliqlar bilan ajratilgan va qavs ichiga olingan raqamlar .
+====
+Vektor - bu bo'shliqlar bilan ajratilgan va kvadrat qavs ichiga olingan so'zlar .
+====
+Vektor - arifmetik amallar belgilariga ega ifoda .
+
+
+++++
+MATLABda matritsa nima ?
+====
+# Matritsa nuqta-vergul bilan ajratilgan va kvadrat qavs ichiga olingan raqamlar qatoridir.
+====
+Matritsa - bu arifmetik amallar belgilariga ega iboralar qatori .
+====
+Matritsa nuqta- vergul bilan ajratilgan va aylana ichiga olingan raqamlar qatoridir .
+qavslar.
+====
+Matritsa nuqta-vergul bilan ajratilgan belgilardir .
+
+
+++++
+MATLAB paketida elementlar bo'yicha operatsiyalarni bajarishda matritsalarning o'lchamlari qanday bo'lishi kerak ?
+====
+# Matritsalar bir xil o'lchamga ega bo'lishi kerak.
+====
+Matritsalar turli o'lchamlarga ega bo'lishi kerak.
+====
+Matritsalar turli o'lchamlarga ega bo'lishi mumkin.
+====
+Matritsalar n o'lchamga ega bo'lishi kerak .
+
+++++
+Belgi matritsa qatorlarini chegaralash uchun ishlatiladi
+====
+ # ; (nuqtali vergul)
+====
+. (nuqta)
+====
+( probel )
+====
+  ' ( apostrof )
+
+++++
+Vektor va matritsalardagi eng oddiy arifmetik operatorlar belgilardir
+ ====
+# +, -, *, /, ^
+====
+  +, -, *, /
+====
+   +, -, ^
+====
+ +, -
+
+++++
+Qaysi operator o'ngdan chapga bo'linishni anglatadi
+====
+# \
+====
+  /
+====
+^
+====
+ *
+
+++++
+Qaysi operator massivlarni elementlar bo‘yicha ko‘paytirishni bildiradi
+====
+# .*
+  ====
+*
+====
+ ./
+====
+ /
+
+++++
+Qaysi operator massivlarni elementlarga bo‘linishini bildiradi
+====
+# ./
+====
+*
+ ====
+ .*
+====
+ /
+
+++++
+da qo‘llaniladigan asosiy tizim o‘zgaruvchilardan qaysi biri xayoliy birlik hisoblanadi?
+====
+# i (j)
+====
+  inf
+====
+  ans
+====
+  NaN
+
+++++
+da qo'llaniladigan asosiy tizim o'zgaruvchilardan qaysi biri suzuvchi nuqta xatosi hisoblanadi?
+====
+# eps
+====
+inf
+====
+ans
+====
+  men (j)
+
+
+++++
+MATLABda ishlatiladigan asosiy tizim o'zgaruvchilardan qaysi biri mashina cheksizligi qiymati hisoblanadi?
+====
+# inf
+ ====
+eps
+====
+ans
+====
+  men (j)
+
+++++
+asosiy tizim o‘zgaruvchilardan qaysi biri oxirgi operatsiya natijasini saqlaydigan o‘zgaruvchi hisoblanadi?
+====
+# ans
+====
+  eps
+ ====
+ inf
+====
+  NaN
+
+++++
+ MATLAB da qo’llaniladigan asosiy tizim o’zgaruvchilardan qaysi biri ma’lumotlarning raqamli bo’lmagan xususiyatini ko’rsatadi?
+ ====
+# NaN
+====
+eps
+====
+  ans
+====
+  men (j)
+
+++++
+Operatorlarning to'liq ro'yxatini buyruq yordamida olish mumkinmi?
+====
+# help ops
+  ====
+help elfun
+ ====
+ help specfun
+====
+  clear a,b,c
+
+++++
+Barcha o'zgaruvchilarning ta'riflarini yo'q qilish uchun funktsiyadan foydalaning
+====
+# clear
+ ====
+ ops
+ ====
+ help ops
+ ====
+ help
+
+++++
+X o'zgaruvchisining ta'rifini yo'q qilish uchun funktsiyadan foydalaning
+====
+# clear
+ ====
+ ops
+ ====
+ help ops
+ ====
+ help
+
+++++
+Belgilangan o'zgaruvchilarning ta'riflarini yo'q qilish uchun funktsiyadan foydalaning
+====
+ # clear a,b,c
+====
+  ops
+ ====
+ help ops
+====
+  help
+
+++++
+Elementar funksiyalar ro'yxati buyruq orqali chaqiriladi
+====
+ # help elfun
+====
+  help specfun
+====
+  help ops
+====
+  help
+
+
+++++
+Buyruq orqali chaqiriladigan maxsus funktsiyalar ro'yxati
+====
+ # help specfun
+====
+  help elfun
+ ====
+ help ops
+  ====
+help
+
+++++
+MATLAB paketidagi mantiqiy o'zgaruvchilar bo'yicha qanday funktsiyalar sinfi bajariladi ?
+ ====
+# Mantiqiy funktsiyalar.
+ ====
+Arifmetik funksiyalar.
+  ====
+trigonometrik funktsiyalar.
+  ====
+To‘plamlar ustidagi funksiyalar.
+
+++++
+O'rnatilgan funktsiya argumentlari MATLABda qanday yoziladi ?
+====
+# O'rnatilgan funktsiyalarga argumentlar qavslar ichiga olingan.
+ ====
+O'rnatilgan funktsiyalarga argumentlar kvadrat qavslar ichiga olinadi.
+====
+  O'rnatilgan funktsiyalarga argumentlar jingalak qavslar ichiga olingan.
+====
+O'rnatilgan funksiya argumentlari qo'shtirnoq ichiga olingan.
+
+++++
+MATLAB paketining qaysi o'rnatilgan funktsiyalari arifmetik sinfga tegishli ?
+====
+# plyus (M, M), mvaqt (M, M), rdivide (M, M).
+====
+tuzatish (A), qavat (A), shift (A), belgisi (X).
+ ====
+kalendar(d), soat, datestr(D, k), tik.
+====
+kesishadi(a,b), setdiff(a,b), birlashma(a,b).
+
+++++
+MATLAB paketining qaysi o'rnatilgan funksiyalari raqamli ma'lumotlarni yaxlitlash funktsiyalari sinfiga kiradi ?
+====
+# fix(A), floor(A), ceil (A), sign(X).
+====
+  plus (M, M), mtimes (M, M), rdivide (M, M).
+====
+  calendar(d), clock, datestr(D, k), tic.
+ ====
+ intersect(a,b), setdiff(a,b), union(a ,b).
+
+++++
+MATLAB paketining qaysi o'rnatilgan funksiyalari sana va vaqt bilan ishlash funksiyalari sinfiga kiradi ?
+
+====
+# calendar(d), clock, datestr(D, k), tic.
+====
+  plus (M, M), mtimes (M, M), rdivide (M, M).
+ ====
+ fix(A), floor(A), ceil (A), sign(X).
+====
+  intersect(a,b), setdiff(a,b), union(a ,b).
+
+
+++++
+MATLAB paketining qaysi o'rnatilgan funktsiyalari to'plamni qayta ishlash funktsiyalari sinfiga kiradi ?
+====
+ # intersect(a,b), setdiff(a,b), union(a ,b).
+  ====
+plus (M, M), mtimes (M, M), rdivide (M, M).
+ ====
+ fix(A), floor(A), ceil (A), sign(X).
+ ====
+ findstr(sl,s), lower(s), upper( s), strrep(sl,s,s), strncmp(S,T,n).
+
+++++
+MATLAB paketining qaysi o'rnatilgan funksiyalari satrlardagi funksiyalar sinfiga kiradi ?
+ ====
+# findstr(sl,s), lower(s), upper( s), strrep(sl,s,s), strncmp(S,T,n).
+====
+  plus (M, M), mtimes (M, M), rdivide (M, M).
+====
+  fix(A), floor(A), ceil (A), sign(X).
+====
+  calendar(d), clock, datestr(D, k), tic.
+
+++++
+MATLAB paketining qaysi o'rnatilgan funksiyalari relyatsion funktsiyalar sinfiga kiradi ?
+====
+# eq (M, M), ne (M, M), lt (M, M), gt (M, M), le (M, M), ge (M, M).
+  ====
+plus (M, M), mtimes (M, M), rdivide (M, M).
+ ====
+ abs(X), factor(n), log (X), mod(X, Y), ехр(Х), lcm(A,B), pow(Y), sqrt(A).
+====
+  and (M, M), or (M, M), not (M), xor (M, M), any (M), all (M).
+++++
+
+MATLAB paketining qaysi o'rnatilgan funktsiyalari algebraik va arifmetik funktsiyalar sinfiga kiradi ?
+====
+# abs(X), factor(n), log (X), mod(X, Y), ехр(Х), lcm(A,B), pow(Y), sqrt(A).
+====
+  plus (M, M), mtimes (M, M), rdivide (M, M).
+====
+  eq (M, M), ne (M, M), lt (M, M), gt (M, M), le (M, M), ge (M, M).
+ ====
+ and (M, M), or (M, M), not (M), xor (M, M), any (M), all (M).
+
+++++
+MATLAB paketining qaysi o'rnatilgan funksiyalari mantiqiy funktsiyalar sinfiga kiradi ?
+====
+# and (M, M), or (M, M), not (M), xor (M, M), any (M), all (M).
+ ====
+ plus (M, M), mtimes (M, M), rdivide (M, M).
+  ====
+eq (M, M), ne (M, M), lt (M, M), gt (M, M), le (M, M), ge (M, M).
+ ====
+ abs(X), factor(n), log (X), mod(X, Y), ехр(Х), lcm(A,B), pow(Y), sqrt(A).
+
+
+++++
+MATLAB funktsiyalari trigonometrik va teskari funktsiyalar sinfiga kiradi ?
+====
+# cos(X), sin (X), ), tan(X), asin(X), acos(X), atan(X), acot (X, acsc(X), asec(X).
+====
+  plus (M, M), mtimes (M, M), rdivide (M, M).
+====
+  eq (M, M), ne (M, M), lt (M, M), gt (M, M), le (M, M), ge (M, M).
+ ====
+ abs(X), factor(n), log (X), mod(X, Y), ехр(Х), lcm(A,B), pow(Y), sqrt(A).
+++++
+
+MATLAB paket funksiyasi matritsani ko'paytirish amalini bajaradi ?
+ ====
+# mtimes (M, M).
+ ====
+ plus (M, M).
+
+====
+  rdivide (M, M).
+====
+  times (M, M).
+
+++++ Qaysi MATLAB paketi funksiyasi matritsa qo'shish amalini bajaradi ?
+====
+# plus (M, M)
+ ====
+ mtimes (M, M)
+ ====
+ rdivide (M, M)
+====
+  times (M, M)
+++++
+MATLAB paketining qaysi funksiyasi massivlarni chapdan o'ngga elementlar bo'yicha bo'lish amalini bajaradi ?
+ ====
+# rdivide (M, M)
+====
+  mtimes (M, M)
+====
+  plus (M, M)
+ ====
+ times (M, M)
+
+
+++++
+MATLAB paketining qaysi funksiyasi massivlarni elementlar bo‘yicha ko‘paytirishni amalga oshiradi ?
+====
+# times (M, M)
+====
+  mtimes (M, M)
+====
+  plus (M, M)
+====
+  rdivide (M, M)
+
+++++
+Matritsani chapdan o'ngga bo'lish amalini MATLAB paketining qaysi funksiyasi bajaradi ?
+====
+# mrdivide(M,M)
+====
+  mtimes (M, M)
+====
+  plus (M, M)
+ ====
+ rdivide (M, M)
+
+++++
+Qaysi MATLAB funktsiyasi matritsani quvvatga ko'tarish operatsiyasini bajaradi ?
+ ====
+# mpower(M,x)
+====
+  power(A,x)
+====
+  mldivide(M,M)
+====
+  ldivide(A,A)
+++++
+MATLAB paketining qaysi funksiyasi massivni element-element darajaga ko‘tarish amalini bajaradi ?
+====
+# power(A,x)
+====
+  mpower(M,x)
+====
+  mldivide(M,M)
+====
+  ldivide(A,A)
+
+++++
+MATLAB paket funksiyasi matritsani teskari (o'ngdan chapga) bo'lish amalini bajaradi ?
+====
+# mldivide(M,M)
+ ====
+ mpower(M,x)
+====
+  power(A,x)
+ ====
+ ldivide(A,A)
+
+++++
+MATLAB paketining qaysi funksiyasi massivlarni o'ngdan chapga elementlar bo'yicha bo'lish amalini bajaradi ?
+====
+# ldivide(A,A)
+====
+  mpower(M,x)
+====
+  power(A,x)
+====
+  mldivide(M,M)
+++++
+MATLAB paketi funksiyasi nima n sonining tub omillarini o'z ichiga olgan qator vektorini qaytaradi (funktsiya massivlar uchun qo'llanilmaydi) ?
+ ====
+# factor(n)
+ ====
+ gcd(A, В)
+====
+  lcm(A,B)
+====
+  pow(Y)
+
+++++
+MATLAB paketi funksiyasi nima butun A va B massivlarining mos elementlarining eng katta umumiy boʻluvchilarini oʻz ichiga olgan massivni qaytaradi ?
+====
+# gcd(A, В)
+  ====
+factor(n)
+====
+  lcm(A,B)
+====
+  pow(Y)
+++++
+
+MATLAB paketi funksiyasi nima musbat butun sonlarni o'z ichiga olishi va bir xil o'lchamga ega bo'lishi kerak bo'lgan A va B massivlarining mos juftlangan elementlari uchun eng kichik umumiy ko'paytmalarni qaytaradi ?
+====
+# lcm(A,B)
+====
+  factor(n)
+====
+  gcd(A, В)
+====
+  pow(Y)
+
+++++
+MATLAB paketi funksiyasi nima har bir element Y bo'lgan X massivni qaytaradi ?
+ ====
+# pow(Y)
+====
+  factor(n)
+====
+  gcd(A, В)
+====
+  lcm(A,B)
+
+++++
+MATLAB paketi funksiyasi nima n dan kichik yoki teng tub sonlar qator vektorini qaytaradi ?
+ ====
+# primes(n)
+====
+  factor(n)
+====
+  gcd(A, В)
+ ====
+ lcm(A,B)
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy kosinusini qaytaradi ?
+ ====
+#acos(X)
+====
+acot(X)
+====
+acsc(X)
+====
+  asec(X)
+
+++++
+Qaysi MATLAB funktsiyasi X ning har bir elementi uchun yoy tangensini qaytaradi ?
+====
+#acot(X)
+ ====
+acos(X)
+ ====
+acsc(X)
+====
+  asec(X)
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy kosekantini qaytaradi ?
+====
+# acsc(X)
+====
+acos(X)
+ ====
+acot(X)
+====
+  asec(X)
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun arcsekantni qaytaradi ?
+====
+ # asek(X)
+====
+acos(X)
+ ====
+acot(X)
+ ====
+acsc ( X )
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun arksinusni qaytaradi ?
+ ====
+#asin(X)
+ ====
+acos(X)
+ ====
+acot(X)
+====
+acsc ( X )
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun yoy tangensini qaytaradi ?
+====
+# atan(X)
+ ====
+ cos(X)
+====
+  cot(X)
+====
+  sec(X)
+
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun kosinusni qaytaradi ?
+ ====
+# cos(X)
+====
+  atan(X)
+====
+  cot(X)
+====
+  sec(X)
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun kotangentni qaytaradi ?
+====
+# cot(X)
+  ====
+atan(X)
+====
+  cos(X)
+====
+  sec(X)
+
+++++
+MATLAB paketi funksiyasi nima X elementlarning sekantini qaytaradi ?
+====
+# sec(X)
+ ====
+ atan(X)
+ ====
+ cos(X)
+====
+  cot(X)
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun sinusni qaytaradi ?
+====
+# sin(X)
+ ====
+ atan(X)
+====
+  cos(X)
+====
+  cot(X)
+
+++++
+MATLAB paketi funksiyasi nima X ning har bir elementi uchun tangensni qaytaradi ?
+====
+# tan(X)
+ ====
+ atan(X)
+====
+  cos(X)
+ ====
+ cot(X)
+
+++++
+MATLAB da qaysi buyruq satr segmentlarini chizadi ?
+====
+# plot
+====
+  bar
+====
+  stairs
+ ====
+ hist
+
+
+++++
+MATLAB da shtrixli diagramma tuzish buyrug'i nima ?
+====
+# bar
+====
+  plot
+====
+  stairs
+====
+  hist
+
+++++
+ MATLABda gistogramma tuzish buyrug'i qanday ?
+ ====
+# hist
+====
+  plot
+====
+  stairs
+====
+  bar
+
+++++
+MATLABda narvon grafigini qurish buyrug'i qanday ?
+ ====
+# stairs
+====
+  plot
+====
+  hist
+ ====
+ bar
+
+
+++++
+Qaysi buyruq logarifmik masshtabda grafik chizadi ?
+====
+# loglogx
+ ====
+ semilogx
+ ====
+ stem
+====
+  Polar
+
+++++
+Yarim logarifmik masshtabda grafik chizilgan qaysi buyruq ?
+====
+# semilogx
+ ====
+ loglogx
+====
+  stem
+====
+  polar
+
+
+++++
+Qaysi buyruqlar funksiyaning diskret namunalarini chizadi ?
+====
+# stem
+ ====
+ loglogx
+ ====
+ semilogx
+====
+  polar
+
+
+++++
+qutbli koordinatalarda grafik chizadi ?
+ ====
+# polar
+====
+  stem
+====
+  loglogx
+ ====
+ Semilogx
+
+++++
+Qaysi buyruq burchakli histogrammalarni tuzadi ?
+ ====
+# rose
+  ====
+compass
+====
+  feather
+====
+  contour
+++++
+
+Qaysi buyruq vektorlarni chizadi ?
+ ====
+# compass
+====
+  rose
+  ====
+feather
+====
+  contour
+
+++++
+Vektorlarning tekislikka proyeksiyalari grafigini qaysi buyruq tuzadi ?
+====
+# pat
+====
+kompas
+====
+atirgul
+====
+kontur
+
+++++
+chizmalarini yaratish uchun qanday buyruq ishlatiladi ?
+ ====
+#kontur
+ ====
+pat
+ ====
+kompas
+ ====
+atirgul
+
+++++
+Qaysi buyruq uch o'lchovli grafiklar uchun ma'lumotlar massivlarini yaratadi ?
+====
+# meshgrid
+ ====
+ quiver
+ ====
+ plot
+====
+  Mesh
+
+++++
+Qaysi komanda Gradient maydon grafiklarini quradi ?
+ ====
+# quiver
+ ====
+ meshgrid
+ ====
+ plot
+====
+  mesh
+
+
+++++
+ Qaysi komanda sirt grafikasini quradi ?
+ ====
+# plot
+====
+  meshgrid
+ ====
+ quiver
+ ====
+ mesh
+
+++++
+ Qaysi funksiya buyrug`i bo'yash bilan to'rli D-uchastkalarini hosil qiladi ?
+====
+# mesh
+ ====
+ plot
+====
+  meshgrid
+====
+  quiver
+
+++++
+Qaysi funksiya buyrug`i proyeksiyalar bilan to'rlangan D- uchastkalarini hosil qiladi ?
+====
+# meshс
+====
+  meshz
+====
+  surf
+====
+  surfc
+
+++++
+Qaysi komanda sirt ustunlarini hosil qiladi ?
+====
+# meshz
+====
+  meshс
+====
+  surf
+ ====
+ surfc
+
+
+++++
+Qaysi komanda bo'yalgan yuzalarni hosil qiladi ?
+====
+# surf
+====
+  meshс
+ ====
+ meshz
+ ====
+ surfc
+
+
+++++
+Qaysi komanda yuzalar va uning proyeksiyalarini  hosil qiladi ? ?
+====
+# surfc
+ ====
+ meshс
+ ====
+ meshz
+ ====
+ surf
+
+++++
+ Qaysi komanda  yoritilgan yuzalarni hosil qiladi?
+====
+#surfl
+ ====
+tilim
+====
+suv tushishi
+ ====
+kontur
+
+++++
+ Qaysi komanda uchta o'zgaruvchili funksiyalar bo'limlari grafiklarini hosil qiladi ?
+====
+# surfl
+ ====
+ slice
+====
+  waterfal
+ ====
+ contour
+
+++++
+Qaysi komanda uch o'lchamli qatlamli sirtlarning grafikasini hosil qiladi ?
+====
+#sharshara
+====
+surfl
+====
+tilim
+====
+kontur
+
+++++
+Qaysi jamoa quradi 3D kontur chizmalari ?
+====
+# contour
+====
+  surfl
+ ====
+ slice
+ ====
+ waterfal
+
+
+Qaysi buyruq to'ldirilgan(bo`yalgan)ko'pburchak hosil qiladi ?
+====
+# patch
+ ====
+ fill
+ ====
+ colorbar
+ ====
+ pie
+
+
+
+++++
+Qaysi buyruq to'ldirilgan tekis ko'pburchak chizadi ?
+====
+# fill
+ ====
+ patch
+ ====
+ colorbar
+ ====
+ pie
+++++
+Qaysi buyruq elektron rang shkalasini chop etadi ?
+====
+# colorbar
+ ====
+ patch
+ ====
+ fill
+ ====
+ pie
+
+
+++++
+Qaysi buyruq doiraviy diagramma chizadi ?
+ ====
+# pie
+====
+  patch
+====
+  fill
+  ====
+colorbar
+
+
+++++
+Qaysi buyruq bo'shliqqa to'ldirilgan ko'pburchak chizadi ?
+ ====
+# fill
+====
+  pie
+ ====
+ cyinder
+====
+  sphere
+
+++++
+Qaysi jamoa 3 o`lchamli doiraviy diagrammalarni tuzadi ?
+====
+# pie
+  ====
+fill
+====
+  cyinder
+====
+  sphere
+
+++++
+Qaysi buyruq silindrni uch o'lchamli figura shaklida chizadi ?
+====
+# cyinder
+====
+  fill
+====
+  pie
+====
+  sphere
+
+++++
+Sferani qaysi buyruq qurmoqda ?
+====
+# sphere
+  ====
+fill
+====
+  pie
+====
+  cyinder
+++++
+
+Qaysi buyruq uchburchaklar bilan uch o'lchamli sim ramka shakllarini yaratadi ?
+====
+# trimesh
+====
+  pie
+====
+  cylinder
+====
+  sphere
+
+
+++++
+  MATLAB da qanday sonlar sinflari ishlatiladi ?
+====
+# Butun, kasr, qo'zg'almas va suzuvchi nuqta, kompleks sonlar ishlatiladi.
+====
+Butun va kasr sonlar ishlatiladi.
+ ====
+Butun sonlar va o'zgarmas va suzuvchi nuqtali raqamlar ishlatiladi.
+====
+Murakkab raqamlar ishlatiladi.
+
+++++
+  Hisoblash natijasini saqlash uchun MATLAB da qanday tizim o'zgaruvchisi qo'llaniladi ?
+====
+# Ans deb nomlangan o'zgaruvchi
+ ====
+a deb nomlangan o'zgaruvchi
+ ====
+pi deb nomlangan o'zgaruvchi
+ ====
+inf deb nomlangan o'zgaruvchi
+
+++++
+ MATLAB paketida tizim konstantasini qanday o'rnatish mumkin eng kichik raqam **(- ) ?
+====
+#realmin _
+ ====
+ i , j
+====
+  eps
+====
+  inf
+
+++++
+  MATLAB paketida tizim konstantasini qanday o'rnatish mumkin eng katta raqam bormi **( ) ?
+====
+#realmax _
+====
+  realmin
+====
+  eps
+====
+  inf
+
+++++
+   MATLAB to'plamida o'zgaruvchilarni qanday yozish kerak raqamli massivni bildiring ?
+====
+# realmax
+====
+  realmin
+====
+  eps
+====
+  inf
+
+++++
+MATLAB to'plamida o'zgaruvchilarni qanday yozish kerak ikki tomonlama aniqlikdagi raqamli massivni bildiring ?
+====
+# single
+  ====
+double
+ ====
+ char
+====
+  cell
+++++
+MATLAB to'plamida o'zgaruvchilarni string massivlari uchun qanday yozish kerak ?
+====
+# char
+====
+  single
+====
+  double
+====
+  struct
+
+++++
+ MATLAB to'plamida o'zgaruvchilarni belgili massivlari uchun qanday yozish kerak ?
+
+====
+# cell
+ ====
+ single
+ ====
+ char
+====
+  struct
+
+
+++++
+MATLAB to'plamida o'zgaruvchilarni qanday yozish kerak tuzilmalar massivini bildiring ?
+====
+# struct
+ ====
+ single
+====
+  double
+====
+  char
+
+++++ MATLAB paketidagi ifoda nimani o'z ichiga olishi mumkin ?
+====
+# Ifodada konstantalar, oʻzgaruvchilar, funksiyalar, vektorlar, matritsalar va arifmetik operatorlar boʻlishi mumkin .
+====
+  Ifodada konstantalar va o'zgaruvchilar bo'lishi mumkin .
+ ====
+ Ifodada vektor va matritsalar bo'lishi mumkin .
+ ====
+ Ifodada arifmetik amallarning doimiylari va belgilari bo'lishi mumkin .
+
+++++
+MATLAB paketidagi hisob-kitoblar natijasining chiqishini bloklash uchun qaysi belgi ishlatiladi ?
+ ====
+#Nuqtali vergul
+====
+Tenglik
+====
+Vergul
+ ====
+Yo'g'on ichak
+
+++++
+ MATLAB da kiritishni belgilash uchun qaysi belfi ishlatiladi ?
+ ====
+# >>
+ ====
+Tenglik
+ ====
+Vergul
+ ====
+Nuqtali vergul
+
+++++
+MATLABda ta`minlash operatori uchun  belgi qanday ishlatiladi ?
+ ====
+#Tenglik bilan
+====
+tirnoq belgisi
+ ====
+Vergul
+ ====
+Yo'g'on ichak
+
+++++
+MATLAB paketida ^ belgisi nimani anglatadi ?
+ ====
+# Darajaga ko`tarish
+ ====
+Elementga element qo‘shish amali
+ ====
+O'ng bo'linish operatsiyasi
+====
+Elementlar bo'yicha ko'paytirish amali
+
+++++
+  MATLAB da n : k : m ko'rinishidagi  operatori qanday yoziladi ?
+====
+# Ikki nuqta operatori.
+ ====
+tayinlash operatori.
+ ====
+Shartli operator.
+  ====
+ro'yxatga olish operatori.
+
+++++
+MATLAB paketida ta`minlash operatori  belgisi qanday ishlatiladi ?
+====
+# "=" belgisi.
+  ====
+"-" belgisini qo'ying.
+ ====
+"== " belgisini qo'ying .
+ ====
+" > =" belgisini qo'ying.
+
+++++
+ MATLABda izohni bildirish uchun qanday  belgi ishlatiladi ?
+ ====
+# "%" belgisi.
+ ====
+"-" belgisini qo'ying.
+ ====
+"== " belgisini qo'ying .
+ ====
+"~" belgisi =.
+
+++++
+MATLAB paketida elementli operatsiya nima ?
+ ====
+# Bir xil indeksli vektor yoki matritsa elementlari ustida bajariladigan amal.
+  ====
+Matritsaning elementlari ustida bajariladigan amal.
+ ====
+Vektor elementlari ustida bajariladigan ko'paytirish amali.
+  ====
+Vektor yoki matritsa elementlarida bajariladigan ko'paytirish amali.
+
+++++
+MATLABda  Qanday operator {if – end }shaklida  yoziladi? _
+ ====
+# Shartli operator
+  ====
+tayinlash operatori
+ ====
+yo'g'on ichak operatori
+ ====
+enum operatori
+
+++++
+MATLABda  Qanday operator {for var  end } shaklida  yoziladi? _
+ ====
+# Sikl operatori
+  ====
+tayinlash operatori
+ ====
+yo'g'on ichak operatori
+  ====
+enum operatori
+
+++++
+ {while    end } Operatori nimani bajaradi ?
+====
+# sikl bayonoti
+====
+tayinlash operatori
+====
+yo'g'on ichak operatori
+====
+enum operatori
+
+++++
+
+Qaysi funksiya identifikatsiya matritsasini yaratadi?
+====
+# еуе
+  ====
+ ones
+  ====
+ zeros
+====
+ rand
+
+++++
+Qaysi funksiya identifikatsiya elementlari bilan matritsa yaratadi?
+====
+# ones
+====
+
+ еуе
+====
+ zeros
+  ====
+ rand
+
+++++
+Qaysi funksiya nol elementli matritsa hosil qiladi?
+====
+# zeros
+====
+ еуе
+====
+ ones
+   ====
+rand
+
+++++
+Qaysi funksiya tasodifiy elementlardan iborat matritsa hosil qiladi?
+====
+# rand
+   ====
+еуе
+  ====
+ ones
+====
+ zeros
+
+
+++++
+Massivlarni qaysi funksiya birlashtiradi?
+====
+# cat
+====
+ diag
+====
+ prod
+  ====
+ sum
+++++
+Qaysi funksiya berilgan diagonalli matritsa hosil qiladi?
+====
+# diag
+   ====
+cat
+====
+ prod
+   ====
+sum
+
+++++
+Massiv elementlarini ko‘paytirish uchun qaysi funksiyadan foydalaniladi?
+====
+# prod
+   ====
+Cat
+====
+  diag
+   ====
+sum
+
+
+++++
+Massivlar elementlarini jamlash uchun qanday funksiyadan foydalaniladi?
+====
+# sum
+  ====
+ cat
+====
+ diag
+  ====
+ prod
+
+++++
+Matritsalarning uchburchak qismlarini tanlash uchun qaysi funksiyadan foydalaniladi?
+====
+# tril
+====
+ cat
+====
+ diag
+====
+ prod
+
+
+++++
+Matritsalar normasini qaysi funksiya hisoblaydi?
+====
+# norm
+  ====
+ det
+  ====
+ rank
+====
+ trace
+
+
+++++
+Matritsaning determinantini (determinantini) topish uchun qanday funksiyadan foydalaniladi ?
+====
+# det
+   ====
+norm
+  ====
+ rank
+  ====
+ trace
+++++
+Matritsaning darajasini hisoblash uchun qanday funktsiyadan foydalaniladi ?
+====
+# rank
+   ====
+norm
+====
+ det
+   ====
+trace
+
+++++
+Qaysi funksiya matritsaning izini qaytaradi?
+====
+# trace
+====
+ norm
+====
+det
+====
+  rank
+
+++++
+“ones” funksiyasi nima uchun kerak?
+====
+# elementlari birdan iborat massivlar yaratish
+====
+null elementlar bilan massivlar yaratish
+====
+elementlar bilan massivlarni yaratish - mos ravishda bir xil va normal taqsimotga ega tasodifiy sonlar
+====
+matritsa yaratish
+
+++++
+“zeros” funksiyasining maqsadi nima?
+====
+# nol elementli massivlarni yaratish
+====
+elementlar bilan massivlarni yaratish - mos ravishda bir xil va normal taqsimotga ega tasodifiy sonlar
+====
+chiziqli diagrammalarni yaratish
+====
+bitta elementlardan iborat massivlarni yaratish
+
+++++
+“Rand” va “randn” funksiyalari nima uchun ishlatiladi?
+====
+# - mos ravishda bir xil va normal taqsimlangan tasodifiy sonlar massivini yaratadi
+====
+chiziqli diagrammalarni yaratish
+====
+matritsa yaratish
+====
+bitta elementlardan iborat massivlarni yaratish
+
+++++
+Qaysi funksiya massivning o‘lchamini qaytaradi (agar u katta yoki teng bo‘lsa)?
+====
+# ndims
+  ====
+ size
+  ====
+ Java
+  ====
+ DIM
+
+++++
+Qatorlarni ustunlar bilan  teskarisiga  almashtirish ___ deyiladi.
+====
+#transponerlash
+====
+  tarqatish
+====
+  almashtirish
+====
+  pochta ro'yxati++++
+Barcha birlik oʻlchamlari olib tashlangan massivni qaytaruvchi funksiya.
+====
+# squeeze
+====
+ shiftdim
+====
+ cat
+  ====
+ permute
+++++
+Strukturani yaratish funktsiyasi
+====
+# struct
+   ====
+fieldnames
+====
+ setfield
+====
+ rmfield
+++++
+Tuzilma maydonlarining nomlarini qaytaruvchi funksiya
+====
+# fieldnames
+====
+ struct
+   ====
+setfield
+  ====
+ rmfield
+++++
+Tuzilish maydonini belgilash funktsiyasi
+====
+# setfield
+====
+ struct
+  ====
+ Fieldnames
+====
+  rmfield
+
+
+++++
+Tuzilish maydonlarini olib tashlash funktsiyasi
+====
+# rmfield
+====
+ struct
+  ====
+ fieldnames
+  ====
+ setfield
+
+++++
+O'chirilishi kerak bo'lgan FIELDS maydonlari ro'yxati quyidagicha ko'rsatilgan:
+====
+# maydonlar massivi
+====
+hujayra massivi
+====
+qiymatlar massivi
+====
+tuzilmalar majmuasi
+
+++++
+Qaysi tasvir formati uchta rangdagi intensivlik massivlaridan iborat - qizil, yashil va ko'k:
+====
+# JPG
+  ====
+ GIF
+====
+ RGB
+   ====
+
+DWG
+
+++++
+Qaysi funksiya hujayra massivini yaratadi?
+====
+# cell
+  ====
+ celldisp
+  ====
+ cellstr
+====
+ deal
+
+
+++++
+Qaysi funksiya massivi yacheykasini aks ettiradi?
+====
+# celldisp
+====
+ cell
+  ====
+ cellstr
+====
+ deal
+
+
+++++
+Qaysi funksiya belgilar massividan katakchalar qatorini yaratadi?
+====
+# cellstr
+  ====
+ cell
+  ====
+ celldisp
+====
+ deal
+
+++++
+Qaysi funktsiya kirish ma'lumotlarini chiqish ma'lumotlariga bir necha marta belgilashni ta'minlaydi?
+====
+# deal
+====
+ cell
+  ====
+ celldisp
+  ====
+ cellstr
+
+++++
+Hujayra massivlarini tekshirish uchun qanday funksiyadan foydalaniladi?
+====
+# iscell
+   ====
+numcell
+====
+ cellstruct
+====
+ structcell
+
+++++
+Qaysi funksiya raqamlar massivini hujayralar massiviga aylantiradi?
+====
+# numcell
+====
+ iscell
+====
+ cellstruct
+  ====
+ structcell
+
+++++
+Qaysi funksiya hujayralar massivini strukturalar massiviga aylantiradi?
+====
+# cellstruct
+  ====
+ iscell
+  ====
+ numcell
+  ====
+ structcell
+
+++++
+Matematik model nima ?
+====
+# O'rganilayotgan ob'ektning modeli bo'lgan chiziqli yoki chiziqli bo'lmagan tenglamalar va tengsizliklar tizimi.
+====
+Chiziqli yoki chiziqli bo'lmagan tenglamalar va tengsizliklar tizimi.
+====
+Ob'ektni tavsiflovchi differensial tenglamalar tizimi .
+====
+ C chiziqli tenglamalar tizimi.
+
+++++
+ Hisoblash tajribasi nima  ?
+====
+# Matematik model va raqamli usul yordamida o'rganilayotgan ob'ekt, jarayon yoki hodisani o'rganish usuli bilan .
+====
+O'rganilayotgan ob'ektni o'rganish usuli bilan .
+====
+O'rganilayotgan ob'ektni o'rganish usuli bilan raqamli usuldan foydalanish.
+====
+ Matematik model yordamida jarayon yoki hodisani o'rganish usuli bilan .
+
+++++
+Raqamli usul nima ?
+====
+# Bu kompyuterda amalga oshirish uchun mavjud bo'lgan matematik modelning talqini.
+====
+ Bu matematik modelning talqini.
+====
+ Bu matematik modelning tavsifi kompyuterda.
+====
+ Bu matematik modelni amalga oshirishdir.
+
+++++
+Muammoni hal qilishning qaysi bosqichida yechimning yakuniy maqsadlari aniqlanadi va -jismoniy ¬jarayonning asosiy qonunlarini to'g'ri (adekvat) tavsiflashi kerak bo'lgan matematik model quriladi ?
+====
+# Muammo bayoni
+====
+Raqamli usulni ishlab chiqish
+====
+Algoritm ishlab chiqish va blok-sxema qurish
+====
+  Dasturni dasturlash va disk raskadrovka
+
+++++
+Muammoni hal qilishning qaysi bosqichida muammoni qandaydir hisoblash ¬algoritmiga qisqartiradigan raqamli usulni topish kerak ?
+====
+# Raqamli usulni ishlab chiqish
+====
+ Muammoni shakllantirish
+====
+ Algoritm ishlab chiqish va blok-sxema qurish
+====
+ Dasturni dasturlash va disk raskadrovka
+
+++++
+Yakuniy natijaga olib keladigan elementar arifmetik va mantiqiy amallar ketma-ketligi sifatida yozilgan masalani yechish jarayoni qaysi bosqich hisoblanadi ?
+====
+# Algoritm ishlab chiqish va blok-sxema qurish
+====
+ Muammoni shakllantirish
+====
+Raqamli usulni ishlab chiqish
+====
+Dasturni dasturlash va disk raskadrovka
+
+++++
+Muammoni hal qilish algoritmi qaysi bosqichda aniq belgilangan amallar ketma-ketligi ko'rinishida yoziladi va dastur nazorat qilinadi ¬, xatolar diagnostika qilinadi va ular tuzatiladi?
+ ====
+# Dasturni dasturlash va disk raskadrovka
+====
+ Muammoni shakllantirish
+====
+ Raqamli usulni ishlab chiqish
+====
+Algoritm ishlab chiqish va blok-sxema qurish
+
+++++
+Qaysi bosqichda hisob-kitoblar uchun dastlabki ma'lumotlar tayyorlanadi va hisob yaxshi ishlaydigan dastur bo'yicha amalga oshiriladi?
+====
+# Hisob-kitoblarni amalga oshirish
+====
+ Muammoni shakllantirish
+====
+ Algoritm ishlab chiqish va blok-sxema qurish
+====
+Dasturni dasturlash va disk raskadrovka
+
+++++
+ Matematik modelga qo'yiladigan asosiy talab nima ?
+====
+# Bu uning etarliligi ko'rib chiqilayotgan ob'ekt.
+====
+Bu uning aniqligi .
+====
+Bu xatoning yo'qligi.
+====
+Bu uning muvofiqligi . va aniqlik.
+
+++++
+ Vazifa barqarorligi nima ?
+====
+# muammoning manba ma'lumotlaridagi noaniqliklarga sezgirligi.
+====
+muammoning chiqish ma'lumotlaridagi noaniqliklarga nisbatan sezgirligi.
+====
+matematik modelning dastlabki ma'lumotlardagi noaniqliklarga sezgirligi.
+====
+muammoning kirish va chiqish ma'lumotlaridagi noaniqliklarga nisbatan sezgirligi.
+
+
+++++
+Muammoni hal qilish algoritmi nima ?
+====
+# Bu yakuniy natijaga olib keladigan elementar arifmetik va mantiqiy operatsiyalar ketma-ketligi.
+====
+Bu elementar operatsiyalar ketma-ketligi.
+====
+Bu yakuniy natijaga olib kelmaydigan mantiqiy operatsiyalar ketma-ketligi.
+====
+Bu natijaga olib keladigan arifmetik amallar ketma-ketligi.
+
+++++
+ SLE A*X=B ni manfiy bo'lmagan cheklovlar bilan eng kichik kvadratlar usuli bilan yechish :
+  ====
+# х =isqnonneg(A,B)
+====
+ х= lsqr (A,B)
+  ====
+ х = bicg (A,B)
+   ====
+х = cov(A,B)
+
+
+++++
+Kvadrat konjugat gradient usuli MATLAB tizimida quyidagilar yordamida amalga oshiriladi:
+====
+# cgs funksiyalari
+   ====
+lskov funktsiyasi
+  ====
+cov funktsiyasi
+  ====
+lsv funktsiyasi
+
+++++
+ Umumlashtirilgan qoldiqni minimallashtirishning iterativ usuli MATLAB tizimida amalga oshiriladi:
+====
+# funktsiya gmres :
+  ====
+lscov funktsiyasi
+====
+ cov funktsiyasi
+  ====
+lsv funktsiyasi
+
+++++
+ Gradientlarining iterativ usuli amalga oshiriladi:
+====
+# qoziq funktsiyasi
+====
+lskov funktsiyasi
+====
+ cov funktsiyasi
+====
+lsv funktsiyasi
+
+++++
+Fzero funksiyasining maqsadi nima MATLAB paketida ?
+ ====
+# Berilgan funksiyaning ildizlarini hisoblash uchun.
+====
+Berilgan funksiyaning maksimalini hisoblash uchun.
+====
+Berilgan funktsiyaning minimalini hisoblash uchun.
+====
+Berilgan funktsiyaning qiymatlarini hisoblash uchun.
+
+++++
+ Fminbnd funksiyasining maqsadi nima MATLAB paketida ?
+====
+# Berilgan funksiyaning minimalini hisoblash uchun.
+====
+Berilgan funksiyaning maksimalini hisoblash uchun.
+====
+Berilgan funktsiyani hisoblash uchun.
+====
+Berilgan funktsiyaning ildizlarini hisoblash.
+
+++++
+MATLAB paketidagi funktsiya oldida minus belgisi bo'lgan fminbnd funksiyasining maqsadi nima ?
+====
+# Berilgan funksiyaning maksimalini hisoblash uchun.
+====
+Berilgan funktsiyaning minimalini hisoblash uchun.
+====
+Berilgan funksiyaning nollarini hisoblash.
+====
+Berilgan funktsiyaning ildizlarini hisoblash.
+
+++++
+MATLAB paketidagi funktsiya oldida minus belgisi bo'lgan fminsearch funksiyasining maqsadi nima ?
+====
+# Bir qator oʻzgaruvchilar funksiyasining local minimumini hisoblash uchun.
+====
+Berilgan funksiyaning maksimalini hisoblash uchun.
+====
+Berilgan funksiyaning nollarini hisoblash.
+====
+Berilgan funktsiyaning ildizlarini hisoblash.
+
+++++
+ MATLAB da trapz funksiyasining maqsadi nima ?
+====
+# Raqamli integratsiya uchun.
+====
+Berilgan funksiyaning maksimalini hisoblash uchun.
+====
+Berilgan funktsiyaning minimalini hisoblash uchun.
+====
+Berilgan funktsiyaning ildizlarini hisoblash.
+
+++++
+Qaysi funksiya namunalar orasidagi birlik pog'onali trapesiya integratsiyasi yordamida aniq integralni qaytaradi ?
+====
+# trapz(Y)
+   ====
+trapz(X,Y)
+   ====
+trapz(...,dim)
+  ====
+ cumtrapz(Y)
+++++
+Qaysi hal qiluvchi ko'p bosqichli Adams-Bashworth-Multon o'zgaruvchan tartib usulini qo'llaydi ?
+====
+# ode
+====
+odetb
+====
+ode
+====
+ode
+
+++++
+Qaysi hal qiluvchi - va - tartibli bir bosqichli aniq Runge-Kutta usullarini amalga oshiradi ?
+====
+# ode
+====
+odetb
+====
+ode
+====
+ode
+
+++++
+ Polinomni qayta ishlash funktsiyasi sifatida n x n o'lchamli A kvadrat matritsasi uchun n+ o'lchamdagi qator vektorini qaytaradi ?
+====
+#poli(A)
+ ====
+poly(r)
+====
+
+roots (с)
+   ====
+polyval (p)
+
+
+++++
+Musbat butun sonlardan iborat X massivni (dan dan gacha raqamli kodlar) MATLAB belgilar massiviga aylantirish uchun quyidagidan foydalaning.
+  ====
+# char (X)
+  ====
+ double(S)
+  ====
+ ischar(S)
+  ====
+ deblank(str)
+
+++++
+S satrining belgilarini raqamli kodlarga aylantirish va ushbu raqamli kodlar bilan vektorni qaytarish uchun funktsiya
+====
+# double(S)
+====
+ char (X)
+  ====
+ ischar(S)
+   ====
+deblank(str)
+
+++++
+Agar S ramziy o'zgaruvchi bo'lsa, mantiqiyni, aks holda mantiqiy nolni qaytarish uchun funktsiyadan foydalaning.
+====
+# ishora(S)
+====
+belgi (X)
+====
+juft(S)
+====
+ deblank(str)
+
+++++
+Argumentdan olingan satrni qaytarish uchun - oxiridan bo'sh joylar olib tashlangan str qatori; vazifasini bajaradi
+====
+# deblank(str)
+  ====
+ char (X)
+  ====
+ double(S)
+====
+ ischar(S)
+
+++++
+Qaysi funksiya ASCII belgilarda ifodalangan s sonli qatorni ikkilamchi aniqlikdagi songa aylantiradi?
+====
+# strdouble ('str')
+   ====
+intstr(X)
+  ====
+matstr(A)
+ ====
+numstr ( A )
+
+++++
+Qaysi funktsiya ASCII belgilarda ifodalangan sonli belgilar massivini - matritsa yoki s qatorini matritsaga (o'lchov massivi) aylantiradi?
+====
+#strnum(lar)
+  ====
+strdouble ('str')
+  ====
+matstr(A)
+ ====
+numstr ( A )
+
+++++
+ikkilik belgilar qatoriga ekvivalent o‘nlik sonni qaytaradi ?
+  ====
+# bindec('binarystr')
+====
+dekbin(d)
+====
+decbase(dn)
+ ====
+dechex ( d )
+
+
+++++
+Qaysi funksiya d kasr sonini n asosdagi son sifatida ifodalovchi belgilar qatorini qaytaradi?
+  ====
+# decbase(dn)
+  ====
+bindec('binarystr')
+  ====
+dekbin ( d )
+====
+dechex(d)
+
+
+
+++++
+ Qaysi buyruq ekranni tozalaydi va kursorni bo'sh ekranning yuqori chap burchagiga qo'yadi ?
+====
+# clc bilan
+====
+home
+  ====
+m o r e on
+====
+echo on all
+
+++++
+  Qaysi buyruq kursorni oynaning yuqori chap burchagiga qaytaradi ?
+====
+# home
+====
+ clс
+====
+ mоrе on
+  ====
+ echo on all
+
+++++
+Qaysi buyruq peyjing rejimini yoqadi ?
+  ====
+# mоrе on
+  ====
+ clс
+  ====
+ home
+  ====
+ echo on all
+++++
+ Qaysi buyruq ekranda barcha m-fayllar matnini ko'rsatish rejimini yoqadi ?
+====
+# echo on all
+  ====
+ clс
+====
+ home
+====
+ mоrе on
+
+
+++++
+Vektor va matritsalardagi eng oddiy arifmetik operatorlar belgilardir
+====
+# +, -, *, /, ^
+====
+ +, -, *, /
+====
+ +, -, ^
+====
+ +, -
+
+
+++++
+Vektor va matritsalardagi qaysi operatorlar + belgilarini bajaradi , -, *, /, ^
+====
+# arifmetikaga
+====
+ mantiqqa
+====
+kompleksga
+====
+oddiygacha
+
+++++
+Vektorlar va matritsalardagi arifmetik operatorlar belgini o'z ichiga oladi
+====
+# -
+====
+.nuqta
+====
+, vergul
+====
+ : yo'g'on ichak
+
+++++
+Vektorlar va matritsalardagi arifmetik operatorlar belgini o'z ichiga oladi
+====
+# *
+====
+  .nuqta
+====
+ , vergul
+====
+ : yo'g'on ichak
+
+++++
+Vektorlar va matritsalardagi arifmetik operatorlar belgini o'z ichiga oladi
+====
+# /
+====
+ .nuqta
+====
+  , vergul
+====
+ : yo'g'on ichak
+
+++++
+Vektorlar va matritsalardagi arifmetik operatorlar belgini o'z ichiga oladi
+====
+#^
+====
+ .nuqta
+====
+ , vergul
+====
+ : yo'g'on ichak
+
+++++
+Qaysi operator o'ngdan chapga bo'linishni anglatadi
+====
+# \
+====
+/
+====
+^
+====
+ :
+
+
+++++
+ Quyidagi operatorlardan qaysi biri o'ngdan chapga bo'linishni anglatadi
+====
+# \
+====
+ /
+====
+^
+  :
+====
+++++
+\ operator anglatadi
+====
+# o'ngdan chapga bo'linish
+====
+ chapdan o'ngga bo'linish
+====
+o'ngdan chapga bo'linish
+====
+ elementlar bo'yicha bo'linish
+
+++++
+ Quyidagi operatorlardan qaysi biri ko‘paytirishni bildiradi
+====
+# *
+====
+ /
+====
+^
+====
+ :
+
+++++
+Quyidagi operatorlardan qaysi biri darajani bildiradi
+====
+#^
+====
+ /
+====
+ *
+====
+ :
+
+++++
+ Quyidagi operatorlardan qaysi biri bo‘linishni anglatadi
+====
+# /
+====
+^
+====
+ *
+====
+ :
+
+
+++++
+.* operatori nimani anglatadi?
+====
+# massivlarni elementlar bo'yicha ko'paytirish
+====
+ massivni ko'paytirish
+====
+ massivlarni elementlar bo'yicha taqsimlash
+====
+massiv tengligi
+
+++++
+ Massivni elementlar bo‘yicha ko‘paytirish va massivni ko‘paytirish operatorlari o‘rtasidagi farq nima?
+====
+# ko'paytirish belgisidan oldin nuqta qo'ying
+====
+ko'paytirish belgisidan oldin vergul qo'yiladi
+====
+ko‘paytirish belgisidan oldin ikki nuqta qo‘ying
+====
+ko'paytirish belgisidan oldin nuqta-vergul qo'ying
+
+++++
+ Qaysi operator massivlarni elementlarga bo‘linishini bildiradi
+====
+# ./
+====
+*
+====
+^
+====
+.*
+
+++++
+Qaysi operator massivlarni elementga ajratadi ?
+====
+# ./
+====
+*
+====
+^
+====
+.*
